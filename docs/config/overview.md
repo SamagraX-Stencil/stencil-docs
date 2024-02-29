@@ -55,7 +55,7 @@ Finally, generate the ultimate configuration based on the form inputs. This repr
 This approach ensures a flexible and user-friendly method for customizing bot functionalities according to specific requirements. -->
 
 
-# Streamlining Bot Creation with a Config-Based Approach
+## Streamlining Bot Creation with a Config-Based Approach
 
 The Config-based approach significantly simplifies the bot creation process by enabling easy creation and updates through a straightforward form within an admin panel.
 
@@ -69,7 +69,7 @@ An `atom` is a basic building block, representing an independent component that 
 
 A `molecule` is a compound component made up of various atoms. It represents a more intricate UI element designed to fulfill a specific function within an application's interface. For example, a Login Page or an OTP (One-Time Password) Page, each composed of multiple atoms to provide a comprehensive and functional unit.
 
-# Process Overview
+## Process Overview
 
 The process involves several steps:
 
