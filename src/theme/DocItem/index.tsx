@@ -17,7 +17,7 @@ import TOC from '@theme/TOC';
 import TOCCollapsible from '@theme/TOCCollapsible';
 import {MainHeading} from '@theme/Heading';
 import styles from './styles.module.css';
-import {ThemeClassNames} from '@docusaurus/theme-common';
+
 
 // CUSTOM CODE
 import DocDemo from '@components/global/DocDemo'
@@ -73,7 +73,7 @@ export default function DocItem(props: Props): JSX.Element {
               {versionMetadata.badge && (
                 <span
                   className={clsx(
-                    ThemeClassNames.docs.docVersionBadge,
+                    '',
                     'badge badge--secondary',
                   )}>
                   Version: {versionMetadata.label}
@@ -86,14 +86,14 @@ export default function DocItem(props: Props): JSX.Element {
                   minHeadingLevel={tocMinHeadingLevel}
                   maxHeadingLevel={tocMaxHeadingLevel}
                   className={clsx(
-                    ThemeClassNames.docs.docTocMobile,
+                    '',
                     styles.tocMobile,
                   )}
                 />
               )}
 
               <div
-                className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
+                className={clsx('', 'markdown')}>
                 {/*
                 Title can be declared inside md content or declared through frontmatter and added manually
                 To make both cases consistent, the added title is added under the same div.markdown block
@@ -146,7 +146,7 @@ export default function DocItem(props: Props): JSX.Element {
               minHeadingLevel={tocMinHeadingLevel}
               maxHeadingLevel={tocMaxHeadingLevel}
               editUrl={editUrl}
-              className={ThemeClassNames.docs.docTocDesktop}
+              className={''}
             />
           )}
         </div>

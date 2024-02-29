@@ -7,7 +7,7 @@
 
 import React, { useState, cloneElement, isValidElement, type ReactElement, useRef, createRef, useEffect } from 'react';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { useScrollPositionBlocker, duplicates } from '@docusaurus/theme-common';
+
 import type { Props } from '@theme/Tabs';
 import type { Props as TabItemProps } from '@theme/TabItem';
 
@@ -48,7 +48,7 @@ function TabsComponent(props: Props): JSX.Element {
       attributes,
       icon,
     }));
-  const dup = duplicates(values, (a, b) => a.value === b.value);
+  const dup = [];
   if (dup.length > 0) {
     throw new Error(
       `Docusaurus error: Duplicate values "${dup
@@ -71,7 +71,7 @@ function TabsComponent(props: Props): JSX.Element {
 
   const [selectedValue, setSelectedValue] = useState(defaultValue);
   const tabRefs: (HTMLLIElement | null)[] = [];
-  const { blockElementScrollPositionUntilNextRender } = useScrollPositionBlocker();
+  // const { blockElementScrollPositionUntilNextRender } = useScrollPositionBlocker();
 
   const handleTabChange = (event: React.FocusEvent<HTMLLIElement> | React.MouseEvent<HTMLLIElement>) => {
     const newTab = event.currentTarget;
@@ -79,7 +79,7 @@ function TabsComponent(props: Props): JSX.Element {
     const newTabValue = values[newTabIndex]!.value;
 
     if (newTabValue !== selectedValue) {
-      blockElementScrollPositionUntilNextRender(newTab);
+      // blockElementScrollPositionUntilNextRender(newTab);
       setSelectedValue(newTabValue);
     }
   };
