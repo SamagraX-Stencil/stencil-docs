@@ -18,5 +18,5 @@ A `molecule` is a Component which is build using different atoms.For eg, Login P
 
 ### Points to consider while creating a molecule
 
-Before creating any molecule we should first thing about the configurations that we can do to that particular molecule.
-For eg, while creating a Login molecule
+Before creating any molecule we should first think about the configurations that we can do to that particular molecule.
+For eg, while creating a Login molecule we can customise the different labels ,theme

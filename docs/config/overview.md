@@ -14,46 +14,6 @@ sidebar_label: Overview
 </head>
 
 
-<!-- The Config-based approach streamlines the bot creation process, enabling easy creation or updates through a simple form in an admin panel.
-
-Before explaining it in details let's go through the defination of `atom` and `molecule`
-
-## Atom
-
-An `atom` represents a foundational building block, an independent single component that can be combined with other atoms to form more complex structures, known as molecules. Examples of atoms include Input fields, Buttons, and Typography elements.
-
-## Molecule
-
-A `molecule` is a composite component constructed from various atoms. It represents a more complex UI element that serves a specific purpose within an application's interface. Examples of molecules include a Login Page and an OTP (One-Time Password) Page.
-
-
-# Steps involved in the process:
-
-
-### Step 1: Create a Molecule
-
-Begin by creating a molecule in the [molecule repository](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/molecules). Consider potential configurations while designing your molecule.
-When designing a molecule, it's essential to first consider the various configurations and customizations that can be applied to enhance its functionality and aesthetic appeal. For instance, when creating a Login molecule, consider customization options such as different label texts, themes, and other properties that can be adjusted to meet the specific requirements of your application's design and functionality.
-
-
-### Step 2: Define Molecule Configuration
-
-Define the configuration options for your molecule that can be modified via the admin panel. For instance, for a `Navbar` molecule, you might include properties for `brandName`, different `logos`, and their placements.
-
-### Step 3: Configure the Admin Panel
-
-After creating your molecule, incorporate its configuration into the admin panel. This allows for the rendering of inputs for all expected properties, enabling easy customization.
-
-### Step 4: Render the Configuration Form
-
-Based on the defined configuration, render the form elements. This facilitates the dynamic customization of the molecule's properties through the admin panel.
-
-### Step 5: Generate the Final Configuration
-
-Finally, generate the ultimate configuration based on the form inputs. This represents the final step in customizing your bot, ready for deployment.
-
-This approach ensures a flexible and user-friendly method for customizing bot functionalities according to specific requirements. -->
-
 
 ## Streamlining Bot Creation with a Config-Based Approach
 
