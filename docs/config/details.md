@@ -55,7 +55,8 @@ This documentation outlines a generic schema for defining UI components within a
 - **Type**: theme | molecule
 - **Mandatory**: Yes
 - **Description**: Categorizes the config based on their nature.
-
+ Where ,`theme` is used for style related configuration and `molecule` is used for UI molecule(component). 
+ 
 ### `props`
 
 - **Type**: object
@@ -71,7 +72,7 @@ This documentation outlines a generic schema for defining UI components within a
 - **Type**: array of objects
 - **Description**: All the nested components can be added through it.
 
-## Example Usage
+## Example Config
 
 ```json
 [
@@ -104,14 +105,18 @@ This documentation outlines a generic schema for defining UI components within a
           "componentName": "Brand Name",
           "keyName": "brandName",
           "defaultValue": "brandName",
-          "allowOverride": true
+          "allowOverride": true,
+          "isAvailable": true,
+          "showInAdmin": true,
         },
         {
           "componentType": "fileInput",
           "componentName": "Right Side Logo",
           "keyName": "rightLogo",
           "defaultValue": "",
-          "allowOverride": true
+          "allowOverride": true,
+          "isAvailable": true,
+          "showInAdmin": true,
         }
       ]
     }
@@ -137,7 +142,7 @@ Based on the filled values the result config will look like this,
       "allowOverride": true
     }
   },
-  "component": {
+  "molecule": {
     "navbar": {
       "brandName": "test bot",
       "allowOverride": true

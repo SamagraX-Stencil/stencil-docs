@@ -8,9 +8,9 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'Bot Creation Config Spec',
+      label: 'Bot Creation Config',
       collapsed: false,
-      items: ['config/intro' ,'config/details', 'config/renderConfig' ,'config/addNewInput']
+      items: ['config/overview','config/intro' ,'config/details', 'config/renderConfig' ,'config/addNewInput']
     },
     {
       type: 'category',
