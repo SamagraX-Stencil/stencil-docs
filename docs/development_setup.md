@@ -1,7 +1,7 @@
 ---
 title: Development Setup
 sidebar_label: Development Setup
-slug: /
+slug: deployment-setup
 hide_table_of_contents: true
 ---
 
