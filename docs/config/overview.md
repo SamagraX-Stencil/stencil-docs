@@ -35,7 +35,7 @@ The process involves several steps:
 
 ### Step 1: Create a Molecule
 
-Start by designing a molecule in the [molecule repository](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/molecules). When doing so, consider the different configurations and customizations that could be applied to make the molecule versatile and visually appealing. For instance, a Login molecule might offer customization options like label texts variations, theme choices, and other adjustable properties to align with your application's design and functional needs.
+Start by designing a molecule in the [molecule repository](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/src/molecules). When doing so, consider the different configurations and customizations that could be applied to make the molecule versatile and visually appealing. For instance, a Login molecule might offer customization options like label texts variations, theme choices, and other adjustable properties to align with your application's design and functional needs.
 
 ### Step 2: Define Molecule Configuration
 
