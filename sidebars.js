@@ -14,6 +14,12 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'Molecules',
+      collapsed: false,
+      items: ['molecules/overview','molecules/loginMobileAadharPage', 'molecules/otpPage']
+    },
+    {
+      type: 'category',
       label: 'Devops',
       collapsed: false,
       items: [
