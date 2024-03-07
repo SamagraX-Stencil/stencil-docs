@@ -101,15 +101,16 @@ const handleLogin = useCallback((e: any) => {
 ### Updating Component Title
 You can update the component title by modifying the `title` value in the `config.json` file.
 
-### Additional Customization
-For further customization, you can modify the component's styling by editing the CSS rules defined in the `index.module.css` file. Adjust styles such as font size, padding, margins, and colors to match your application's design guidelines.
-
 ```
 "component": {
   "allowOverride": false,
   "title": "Welcome to OTP Verification!"
 }
 ```
+
+### Additional Customization
+For further customization, you can modify the component's styling by editing the CSS rules defined in the `index.module.css` file. Adjust styles such as font size, padding, margins, and colors to match your application's design guidelines.
+
 
 ## Notes
 - This molecule does not handle actual OTP verification. It simulates the verification process by displaying a success message upon entering the correct OTP.

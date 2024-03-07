@@ -120,6 +120,16 @@ const handleRegistration = () => {
   };
 ```
 
+### Updating Component Title
+You can update the component title by modifying the `title` value in the `config.json` file.
+
+```
+"component": {
+  "allowOverride": false,
+  "title": "Welcome to Login Page!"
+}
+```
+
 ## Notes
 
 - This molecule does not handle actual authentication. It simulates the login process by displaying a success message upon clicking the login button.
