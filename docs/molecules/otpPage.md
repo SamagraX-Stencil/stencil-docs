@@ -59,9 +59,62 @@ The `OtpPage` molecule consists of the following elements:
 - CSS modules are used for styling the component.
 - Styles are defined in the index.module.css file.
 
+## Customization
+This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+
+### Theme Customization
+The component's theme colors can be easily customized by updating the values in the `config.json` file. Modify the `primaryColor` and `secondaryColor` values to match your desired color scheme.
+
+```
+"theme": {
+  "primaryColor": {
+    "value": "#ffa500",
+    "allowOverride": true
+  },
+  "secondaryColor": {
+    "value": "#1E232C",
+    "allowOverride": true
+  }
+}
+```
+
+### Adding Custom Actions
+To add custom actions upon successful login, you can extend the `handleLogin` function. For example, you can navigate the user to a different page, fetch user data, or perform any other action necessary for your application.
+
+```
+const handleLogin = useCallback((e: any) => {
+  e.preventDefault();
+  if (otp.length === 4) {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      // Perform custom action upon successful login
+      // For example, navigate to a different page
+      history.push('/dashboard');
+    }, 2000);
+  } else {
+    toast.error(`Please enter correct OTP`);
+  }
+}, [otp.length]);
+```
+
+### Updating Component Title
+You can update the component title by modifying the `title` value in the `config.json` file.
+
+### Additional Customization
+For further customization, you can modify the component's styling by editing the CSS rules defined in the `index.module.css` file. Adjust styles such as font size, padding, margins, and colors to match your application's design guidelines.
+
+```
+"component": {
+  "allowOverride": false,
+  "title": "Welcome to OTP Verification!"
+}
+```
+
 ## Notes
 - This molecule does not handle actual OTP verification. It simulates the verification process by displaying a success message upon entering the correct OTP.
 - The OTP length is hardcoded to 4 digits.
+- For further customization, you can modify the JSX structure, styles, and functionality according to your application's needs.
 
 
 
