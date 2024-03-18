@@ -16,7 +16,7 @@ module.exports = {
       type: 'category',
       label: 'Molecules',
       collapsed: false,
-      items: ['molecules/overview','molecules/loginMobileAadharPage', 'molecules/otpPage','molecules/downtimePage','molecules/comingSoonPage','molecules/faqPage']
+      items: ['molecules/overview','molecules/loginMobileAadharPage', 'molecules/otpPage', 'molecules/feedbackPage','molecules/downtimePage','molecules/comingSoonPage','molecules/faqPage']
     },
     {
       type: 'category',
