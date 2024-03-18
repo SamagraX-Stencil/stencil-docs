@@ -5,7 +5,7 @@ sidebar_label: Feedback page
 
 <head>
     <title> Feedback page </title>
-    <meta name="description" content="your meta content goes here" /
+    <meta name="description" content="your meta content goes here" />
 </head>
 
 The `FeedbackPage` molecule is a React component designed for user review and rating about the app. It provides a user-friendly interface for users to rate/review and submit.
@@ -120,6 +120,8 @@ You can update the component title by modifying the `title` value in the `config
   "allowOverride": false,
   "title": "Welcome to Feedback Page!"
 }
+
+```
 
 
 
