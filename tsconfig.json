@@ -1,4 +1,3 @@
-// @ts-ignore
 {
   "extends": "@tsconfig/docusaurus/tsconfig.json",
   "exclude": ["static/code/stackblitz/"]
