@@ -15,17 +15,15 @@ The `FeedbackPage` molecule is a React component designed for user review and ra
 ## Usage 
 
 ```
-
 import FeedbackPage from './FeedbackPage';
 
 const App = () => {
     return (
         <FeedbackPage />
-    )
+    );
 }
 
 export default App
-
 ```
 
 ## Description
@@ -51,7 +49,6 @@ The `FeedbackPage` molecule consists of the following elements:
 - Upon clicking the submit review button, the component checks if the input is valid and initiates the submission process.
 - If the input is valid, a success message is displayed, and if not, an error message is displayed.
 
-
 ## Dependencies
 
 - React: JavaScript library for building user interfaces.
@@ -62,22 +59,11 @@ The `FeedbackPage` molecule consists of the following elements:
 
 - The default theme colors can be configured in the config.json file.
 - The components can be configured in the config.json file.
-    - title
-    - rating box
-    - rating box title
-    - rating star description
-    - rating button text
-    - review box
-    - review box title
-    - review button text
-    - review placeholder
 
 ## Styling
 
 - CSS modules are used for styling the component.
 - Styles are defined in the index.module.css file.
-
-
 
 ## Customization
 
@@ -122,8 +108,6 @@ You can update the component title by modifying the `title` value in the `config
 }
 
 ```
-
-
 
 ## Notes
 
