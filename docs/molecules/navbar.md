@@ -91,7 +91,7 @@ You can put your brand name to get it reflected on the UI
 
 ```json
 
-  "showHamburgerMenu": "Bot" // or any other name
+  "brandName": "Bot" // or any other name
 
 ```
  
