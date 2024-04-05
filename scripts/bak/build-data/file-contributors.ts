@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import { outputJson } from 'fs-extra';
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');;
 import { resolve } from 'path';
 import url from 'url';
 
