@@ -58,13 +58,15 @@
     "docusaurus-plugin-sass": "^0.2.1",
     "fs-extra": "^9.1.0",
     "modern-normalize": "^1.1.0",
+    "node-fetch": "2.6.7",
     "plugin-image-zoom": "github:flexanalytics/plugin-image-zoom",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "remark-html": "^13.0.1",
     "remark-parse": "^8.0.3",
     "sass": "^1.44.0",
-    "semver": "^7.3.5"
+    "semver": "^7.3.5",
+    "unified": "9.2.2"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "0.0.0-4192",
