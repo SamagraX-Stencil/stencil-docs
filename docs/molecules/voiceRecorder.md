@@ -133,10 +133,10 @@ You can adjust the following parameters used for audio analysis and recording:
 You can customize the error and processing messages displayed during different states of the recorder:
 
 - **Recorder Error Message**: Message displayed when the recorded audio is not recognized or an error occurs.
-  - Default Message: "Your question was not recognized. Please try speaking more clearly."
+  - **Default Message**: "Your question was not recognized. Please try speaking more clearly."
 
 - **Wait Message**: Message displayed while the recorder is processing the recorded audio.
-  - Default Message: "Please wait while we process your request..."
+  - **Default Message**: "Please wait while we process your request..."
 
 These configuration values allow you to tailor the Voice Recorder component to suit your application's requirements, providing flexibility in icon selection, audio analysis parameters, and user feedback messages.
 
@@ -147,7 +147,6 @@ For further customization, you can modify the component's styling by editing the
 
 ## Notes
 - The molecule simulates the voice recording process for demonstration purposes and does not handle actual audio processing.
-- The OTP length is hardcoded to 4 digits.
 - Further customization can be done by modifying the JSX structure, styles, and functionality according to your application's requirements
 
 
