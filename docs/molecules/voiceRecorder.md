@@ -8,7 +8,7 @@ sidebar_label: Voice Recorder
   <title> Voice Recorder </title>
   <meta
     name="description"
-    content="your meta content goes here"
+    content="A React component for recording audio with customizable icons and error messages. Users can start and stop recording, with visual feedback during the recording process."
   />
 </head>
 
