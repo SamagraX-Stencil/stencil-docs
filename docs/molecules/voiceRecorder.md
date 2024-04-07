@@ -8,7 +8,7 @@ sidebar_label: Voice Recorder
   <title> Voice Recorder </title>
   <meta
     name="description"
-    content="A React component for recording audio with customizable icons and error messages. Users can start and stop recording, with visual feedback during the recording process."
+    content="A customizable React component for recording audio. Users can start and stop recording, with visual feedback during the recording process."
   />
 </head>
 
@@ -96,22 +96,6 @@ To add custom actions , you can extend the `makeComputeAPICall` function to defi
 
 You can update various aspects of the Voice Recorder component by modifying the configuration values in the `config.json` file.
 
-#### Custom Icons
-
-You can customize the icons used for different states of the voice recorder:
-
-- **Start Icon**: Icon displayed when the recorder is ready to start recording.
-  - Icon Path: `src/molecules/VoiceRecorder/assets/startIcon.png`
-
-- **Stop Icon**: Icon displayed when the recorder is actively recording audio.
-  - Icon Path: `src/molecules/VoiceRecorder/assets/stop.gif`
-
-- **Error Icon**: Icon displayed when an error occurs during the recording process.
-  - Icon Path: `src/molecules/VoiceRecorder/assets/error.gif`
-
-- **Processing Icon**: Icon displayed when the recorder is processing the recorded audio.
-  - Icon Path: `src/molecules/VoiceRecorder/assets/process.gif`
-
 #### Audio Analysis Parameters
 
 You can adjust the following parameters used for audio analysis and recording:
@@ -138,7 +122,7 @@ You can customize the error and processing messages displayed during different s
 - **Wait Message**: Message displayed while the recorder is processing the recorded audio.
   - **Default Message**: "Please wait while we process your request..."
 
-These configuration values allow you to tailor the Voice Recorder component to suit your application's requirements, providing flexibility in icon selection, audio analysis parameters, and user feedback messages.
+These configuration values allow you to tailor the Voice Recorder component to suit your application's requirements, audio analysis parameters, and user feedback messages.
 
 
 ### Additional Customization
