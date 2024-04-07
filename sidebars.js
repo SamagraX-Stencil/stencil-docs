@@ -16,7 +16,7 @@ module.exports = {
       type: 'category',
       label: 'Molecules',
       collapsed: false,
-      items: ['molecules/overview','molecules/loginMobileAadharPage', 'molecules/otpPage', 'molecules/feedbackPage','molecules/downtimePage','molecules/comingSoonPage','molecules/faqPage', 'molecules/navbar' , 'molecules/sidebar' , 'molecules/Historypage', 'molecules/launchPage' ]
+      items: ['molecules/overview','molecules/loginMobileAadharPage', 'molecules/otpPage', 'molecules/feedbackPage','molecules/downtimePage','molecules/comingSoonPage','molecules/faqPage', 'molecules/navbar' , 'molecules/sidebar' , 'molecules/Historypage', 'molecules/launchPage', 'molecules/homePage', 'molecules/chatUi' ]
     },
     {
       type: 'category',
