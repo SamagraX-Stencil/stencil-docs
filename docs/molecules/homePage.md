@@ -107,17 +107,15 @@ Update the component object in the `config.json` file to customize various aspec
  ```json
 
 "component": {
-      "allowOverride": false,
+        "allowOverride": false,
       "title": "Ask me anything about farming",
-      "showBtns": true,
-      "btns": [
-        {
-          "title": "Weather Advisory",
-          "image": ""
-        }
-      ],
-      "showMic": true,
-      "placeholder": "Ask your question"
+      "showKalia": false,
+      "showWeatherAdvisory": true,
+      "showPlantProtection": true,
+      "weatherAdvisoryImg": "",
+      "plantProtectionImg": "",
+      "kaliaStatusImg": "",
+      "showMic": true
 }
 
 
