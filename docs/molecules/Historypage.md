@@ -65,10 +65,51 @@ Modify the colors and styles in the `style.module.css` file to match your applic
  Update the component object in the config.json file to customize the title and other configurations
 
  ```json
-"component": {
-      "allowOverride": false,
-      "title": "History"
+{
+  "component": {
+    "allowOverride": false,
+    "title": "History",
+    "defaultValue": "",
+    "allowOverride": true,
+    "isAvailable": true,
+    "showInAdmin": true,
+    "category": "molecule",
+    "props": {
+      "keyName": "historyPage",
+      "children": [
+        {
+          "componentType": "textInput",
+          "componentName": "Title",
+          "keyName": "title",
+          "defaultValue": "Chats",
+          "allowOverride": true
+        },
+        {
+          "componentType": "booleanInput",
+          "componentName": "Delete chat feature",
+          "keyName": "allowDelete",
+          "defaultValue": true,
+          "allowOverride": true
+        },
+        {
+          "componentType": "booleanInput",
+          "componentName": "Allow to show timestamp",
+          "keyName": "showTimestamp",
+          "defaultValue": true,
+          "allowOverride": true
+        },
+        {
+          "componentType": "textInput",
+          "componentName": "Empty chat history",
+          "keyName": "noItemsText",
+          "defaultValue": "No items found",
+          "allowOverride": true
+        }
+      ]
+    }
   }
+}
+
  ```
 
  
