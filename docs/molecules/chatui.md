@@ -27,8 +27,6 @@ export default App;
 
 ```
 
-
-
 ## Description
 
  The ChatUI component offers a messaging interface with support for sending and receiving messages. It integrates additional features such as sharing, downloading chats, providing feedback, and text-to-speech functionality.
