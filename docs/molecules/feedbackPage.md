@@ -12,9 +12,11 @@ The `FeedbackPage` molecule is a React component designed for user review and ra
 
 <img src="/img/molecules/feedbackReviewAndRatingPage.png" alt="Feedback Page" />
 
+
 ## Usage 
 
 ```
+
 import FeedbackPage from './FeedbackPage';
 
 const App = () => {
@@ -39,7 +41,6 @@ The `FeedbackPage` molecule consists of the following elements:
 
 - `star`: Number state to store the number of stars rated by user
 - `review`: String state to store the input value i.e. reivew written by user
-
 
 ## Functionality
 
