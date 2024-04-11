@@ -1,5 +1,13 @@
 [
   {
+    "body": "<h3>Performance Improvements</h3>\n<ul>\n<li><strong>styles:</strong> compress distributed global stylesheets (<a href=\"https://github.com/ionic-team/ionic-framework/issues/29275\">#29275</a>) (<a href=\"https://github.com/ionic-team/ionic-framework/commit/b3cd49bf2219aacffc1ac34acbae7c76ef243765\">b3cd49b</a>)</li>\n</ul>\n",
+    "name": "v7.8.4",
+    "published_at": "April 10 2024",
+    "tag_name": "v7.8.4",
+    "type": "patch",
+    "version": "7.8.4"
+  },
+  {
     "body": "<h3>Bug Fixes</h3>\n<ul>\n<li><strong>button:</strong> activated outline button in toolbar no longer blends into background on MD dark mode (<a href=\"https://github.com/ionic-team/ionic-framework/issues/29216\">#29216</a>) (<a href=\"https://github.com/ionic-team/ionic-framework/commit/ee5da7a747c0a0b420c5e371a9fe9ec4938d179e\">ee5da7a</a>)</li>\n<li><strong>popover:</strong> viewport can be scrolled if no content present (<a href=\"https://github.com/ionic-team/ionic-framework/issues/29215\">#29215</a>) (<a href=\"https://github.com/ionic-team/ionic-framework/commit/f08759c2b8256ff66f8d1901bd8e0be4617db262\">f08759c</a>), closes <a href=\"https://github.com/ionic-team/ionic-framework/issues/29211\">#29211</a></li>\n</ul>\n",
     "name": "v7.8.3",
     "published_at": "April 3 2024",
