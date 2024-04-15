@@ -20,7 +20,7 @@ The process of creating a molecule involves several steps.
 
 Ensure that the below files/folders are present in the newly created molecule folder:
 
-### Assets
+### assets
 
 The asset folder within the molecule serves as a centralized location for storing static files and resources that are essential for your molecule. These assets typically include images, fonts, and other static files.
 
@@ -120,4 +120,86 @@ test('renders component with default props', () => {
   expect(componentElement).toBeInTheDocument();
 });
 ```
+## Importing a Molecule
 
+Importing molecules is a straightforward process that involves identifying the component, importing it into the appropriate file, and using it within your TSX code. By following the guidelines, you can effectively integrate components into your React application.
+
+After designing the molecule, add the molecule in the `index.json` file inside the [molecules](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/src/molecules/index.json) folder. How the molecule is designed, accordingly it should be added in the object:
+- If the molecule is a separate page then it should be added in `pages`
+- If the molecule is a sub-component then it should be added in `molecules`
+
+```
+{
+  "pages": [
+    "otp-page",
+    "downtime-page",
+    "feedback-page",
+    "history-page",
+    "faq-page",
+    "chat-ui",
+    "login-mobile-aadhar-page",
+    "coming-soon-page",
+    "home-page",
+    "launch-page"
+  ],
+  "molecules": [
+    "otp-input",
+    "chat-ui",
+    "share-buttons",
+    "voice-recorder",
+    "json-to-table"
+  ]
+}
+```
+### How and Where to Import a Molecule
+- All the `page` molecules are imported within the `App.tsx` file. This allows you to associate the imported component with a particular route path.
+
+```
+import { Navbar } from "./components/navbar";
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "./molecules/login-mobile-aadhar-page";
+import { Toaster } from "react-hot-toast";
+import Components from "./components";
+import OtpPage from "./molecules/otp-page";
+import HistoryPage from "./molecules/history-page";
+import ComingSoonPage from "./molecules/coming-soon-page";
+import DowntimePage from "./molecules/downtime-page";
+import FAQPage from "./molecules/faq-page";
+import LaunchPage from "./molecules/launch-page";
+import HomePage from "./molecules/home-page";
+import FeedbackPage from "./molecules/feedback";
+import ShareButtons from "./molecules/share-buttons";
+import { ChatUI } from "./molecules/chat-ui";
+
+function App() {
+  return (
+    <>
+      <Toaster />
+      <Navbar />
+      <>
+        <Routes>
+          <Route index element={<LoginPage />} /> 
+          <Route path="/login-mobile-aadhar-page" element={<LoginPage />} />
+          <Route path="/otp-page" element={<OtpPage />} />
+          <Route path="/history-page" element={<HistoryPage />} />
+          <Route path="/coming-soon-page" element={<ComingSoonPage />} />
+          <Route path="/downtime-page" element={<DowntimePage />} />
+          <Route path="/faq-page" element={<FAQPage />} />
+          <Route path="/home-page" element={<HomePage />} />
+          <Route path="/coming-soon-page" element={<ComingSoonPage />} />
+          <Route path="/downtime-page" element={<DowntimePage />} />
+          <Route path="/faq-page" element={<FAQPage />} />
+          <Route path="/feedback-page" element={<FeedbackPage />}/>
+          <Route path="/launch-page" element={<LaunchPage />} />
+          <Route path="/share-buttons" element={<ShareButtons />} />
+          <Route path="/chat-ui" element={<ChatUI />} />
+          <Route path="/molecules" element={<Components />}/>
+        </Routes>
+      </>
+    </>
+  );
+}
+export default App;
+```
+
+- All the `component` molecules are imported in the `index.tsx` file within the [components](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/src/components) folder. This allows you to associate the components with a `/molecules` route path.
