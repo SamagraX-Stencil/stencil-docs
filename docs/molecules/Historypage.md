@@ -14,7 +14,7 @@ The ``HistoryPage`` component is a React page that displays a list of historical
 
 ## Usage
 
-```
+```tsx
 import HistoryPage from './historyPage';
 
 const App = () => {

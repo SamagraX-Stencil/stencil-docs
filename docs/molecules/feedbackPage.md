@@ -74,7 +74,7 @@ This molecule provides flexibility for customization to suit your application's 
 
 You can customize the theme colors by modifying the values in the `config.json` file. The theme object contains `primaryColor` and `secondaryColor` properties, allowing you to specify the colors according to your brand or design preferences.
 
-```
+```json
 "theme": {
   "primaryColor": {
     "value": "#ffa500",

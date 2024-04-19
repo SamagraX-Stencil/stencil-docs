@@ -1,5 +1,21 @@
 [
   {
+    "body": "<p><strong>Note:</strong> Version bump only for package ionic-framework</p>\n",
+    "name": "v8.0.0",
+    "published_at": "April 17 2024",
+    "tag_name": "v8.0.0",
+    "type": "major",
+    "version": "8.0.0"
+  },
+  {
+    "body": "<h3>Bug Fixes</h3>\n<ul>\n<li><strong>modal:</strong> improve sheet modal scrolling and gesture behavior (<a href=\"https://github.com/ionic-team/ionic-framework/issues/29312\">#29312</a>) (<a href=\"https://github.com/ionic-team/ionic-framework/commit/9738228bc05abe3e2012e57b0e6b85f0ec06f66b\">9738228</a>), closes <a href=\"https://github.com/ionic-team/ionic-framework/issues/24583\">#24583</a></li>\n</ul>\n",
+    "name": "v7.8.5",
+    "published_at": "April 17 2024",
+    "tag_name": "v7.8.5",
+    "type": "patch",
+    "version": "7.8.5"
+  },
+  {
     "body": "<h3>Performance Improvements</h3>\n<ul>\n<li><strong>styles:</strong> compress distributed global stylesheets (<a href=\"https://github.com/ionic-team/ionic-framework/issues/29275\">#29275</a>) (<a href=\"https://github.com/ionic-team/ionic-framework/commit/b3cd49bf2219aacffc1ac34acbae7c76ef243765\">b3cd49b</a>)</li>\n</ul>\n",
     "name": "v7.8.4",
     "published_at": "April 10 2024",
@@ -110,13 +126,5 @@
     "tag_name": "v7.6.5",
     "type": "patch",
     "version": "7.6.5"
-  },
-  {
-    "body": "<h3>Bug Fixes</h3>\n<ul>\n<li><strong>input:</strong> slotted buttons are clickable (<a href=\"https://github.com/ionic-team/ionic-framework/issues/28772\">#28772</a>) (<a href=\"https://github.com/ionic-team/ionic-framework/commit/4ccc150edff4e3f33f453343aedb081d920b2f90\">4ccc150</a>), closes <a href=\"https://github.com/ionic-team/ionic-framework/issues/28762\">#28762</a></li>\n</ul>\n",
-    "name": "v7.6.4",
-    "published_at": "January 17 2024",
-    "tag_name": "v7.6.4",
-    "type": "patch",
-    "version": "7.6.4"
   }
 ]

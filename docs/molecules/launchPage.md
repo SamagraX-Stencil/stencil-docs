@@ -14,7 +14,7 @@ The `LaunchPage` component is a React page designed as the initial landing page 
 
 ## Usage
 
-```
+```tsx
 import LaunchPage from './launchPage';
 
 const App = () => {

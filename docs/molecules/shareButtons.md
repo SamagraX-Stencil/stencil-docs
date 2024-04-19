@@ -14,7 +14,7 @@ The `share-buttons` molecule is a React component designed for users actions to 
 
 ## Usage 
 
-```
+```tsx
 import ShareButtons from './share-buttons';
 
 const App = () => {
@@ -57,7 +57,7 @@ The `ShareButtons` molecule consists of the following elements:
 ## Styling
 
 - CSS modules are used for styling the component.
-- Styles are defined in the index.module.css file.
+ 
 
 ## Customization
 
@@ -67,7 +67,7 @@ This molecule provides flexibility for customization to suit your application's 
 
 You can customize the theme colors by modifying the values in the `config.json` file. The theme object contains `primaryColor` and `secondaryColor` properties, allowing you to specify the colors according to your brand or design preferences.
 
-```
+```json
 "theme": {
   "primaryColor": {
     "value": "#1e6231",
@@ -86,7 +86,7 @@ To add custom actions such as downloading or sharing steps:
 
 - **Download Chat Functionality**: Implement the download logic within the `downloadChat` function. You can trigger a download process with your backend service.
 
-```
+```tsx
 const downloadChat = async (type: string) => {
     // perform your download chat logic here
   };
@@ -95,7 +95,7 @@ const downloadChat = async (type: string) => {
 ### Accessing share and download button
 You can select weather which functionality you want by simply modifying `allowDownloadChat` and `allowShareChat` value in the `config.json` file.
 
-```
+```json
 "component": {
       "allowOverride": false,
       "allowDownloadChat": true,

@@ -17,7 +17,7 @@ The `OtpPage` molecule is a React component designed for OTP (One-Time Password)
 <img src="/img/molecules/otpPage.png" alt="OTP Page Molecule" />
 
 ## Usage
-```
+```tsx
 import OtpPage from './OtpPage';
 
 const App = () => {
@@ -65,7 +65,7 @@ This molecule provides flexibility for customization to suit your application's 
 ### Theme Customization
 The component's theme colors can be easily customized by updating the values in the `config.json` file. Modify the `primaryColor` and `secondaryColor` values to match your desired color scheme.
 
-```
+```json
 "theme": {
   "primaryColor": {
     "value": "#ffa500",
@@ -81,7 +81,7 @@ The component's theme colors can be easily customized by updating the values in 
 ### Adding Custom Actions
 To add custom actions upon successful login, you can extend the `handleLogin` function. For example, you can navigate the user to a different page, fetch user data, or perform any other action necessary for your application.
 
-```
+```tsx
 const handleLogin = useCallback((e: any) => {
   e.preventDefault();
   if (otp.length === 4) {
@@ -101,7 +101,7 @@ const handleLogin = useCallback((e: any) => {
 ### Updating Component Title
 You can update the component title by modifying the `title` value in the `config.json` file.
 
-```
+```json
 "component": {
   "allowOverride": false,
   "title": "Welcome to OTP Verification!"

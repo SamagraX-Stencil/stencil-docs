@@ -14,7 +14,7 @@ The `Coming Soon` molecule is a React component designed to inform visitors abou
 
 ## Usage
 
-```
+```tsx
 import ComingSoonPage from './ComingSoonPage';
 
 const App = () => {
@@ -60,7 +60,7 @@ This molecule provides flexibility for customization to suit your application's 
 
 You can customize the theme colors by modifying the values in the `config.json` file. The theme object contains `primaryColor` and `secondaryColor` properties, allowing you to specify the colors according to your brand or design preferences.
 
-```
+```json
 "theme": {
   "primaryColor": {
     "value": "#219653",
@@ -79,7 +79,7 @@ To add custom actions for previous page feature, follow below steps:
   
   - **Previous Page Functionality**: Implement the previous page logic within the `handleBack` function. You can use back() method to go to the previous page.
 
-  ```
+  ```tsx
   const handleBack = useCallback(()=>{
     // window?.history?.back()
     console.log(component.backText ?? "Back Button")
@@ -89,7 +89,7 @@ To add custom actions for previous page feature, follow below steps:
 ### Updating Component
 You can update the component keys by modifying the `key` value in the `config.json` file.
 
-```
+```json
 "component": {
     "allowOverride": false,
     "title": "Coming Soon!",
