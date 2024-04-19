@@ -51,7 +51,7 @@ The ChatUI component offers flexibility for customization through its configurat
 
   "component": {
      
-  "component": {
+  
       "allowOverride": false,
       "placeholder": "Ask Your Question",
       "allowFeedback": true,
@@ -71,7 +71,7 @@ The ChatUI component offers flexibility for customization through its configurat
       "transliterationSuggestions": 3,
       "rightAction": null,
       "leftAction": null
-  }
+  
   }
 ```
 
