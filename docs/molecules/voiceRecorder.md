@@ -17,7 +17,7 @@ The `VoiceRecorder` molecule is a React component designed to facilitate voice r
 <img src="/img/molecules/voiceRecorder.png" alt="OTP Page Molecule" />
 
 ## Usage
-```
+```tsx
 import VoiceRecorder from './VoiceRecorder';
 
 const App = () => {
@@ -64,7 +64,7 @@ The VoiceRecorder molecule comprises several elements:
 ### Adding Custom Actions
 To add custom actions , you can extend the `makeComputeAPICall` function to define custom actions upon successful recording
 
-```
+```tsx
   const makeComputeAPICall = async (blob: Blob) => {
     try {
       setRecorderStatus('processing')

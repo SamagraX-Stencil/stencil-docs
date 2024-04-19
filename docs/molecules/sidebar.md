@@ -33,7 +33,7 @@ export default App;
 
  
 
-### Features
+## Description
 
 - *Dynamic Configuration*: The sidebar's content and behavior are driven by a configuration object loaded asynchronously from a JSON file.
 - *Language Switcher*: If enabled in the configuration, the sidebar displays a language switcher allowing users to switch between different languages. Each language option is represented by a button with a label.
@@ -45,7 +45,7 @@ export default App;
  
  
 
-## Implementation Details
+## Functionality
 
 - The component is structured using Material-UI components such as Drawer, List, and ListItem etc for styling and functionality.
 
@@ -118,4 +118,5 @@ The Routing of the other pages can be configured from the links array which stor
 
 
 ## Notes
- - This molecule is not properly routed for the project. Route it according to your project and customize the icons to your brand theme and work on it. The internal routing also needs to be done for easy navigation.
+ - This molecule is not properly routed for the project. Route it according to your project and customize the icons to your brand theme and work on it. 
+ - The internal routing also needs to be done for easy navigation.

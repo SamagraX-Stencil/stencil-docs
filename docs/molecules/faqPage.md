@@ -14,7 +14,8 @@ The `FAQ` molecule is a React component serves as a centralized repository of an
 
 ## Usage
 
-```
+```tsx
+
 import FAQPage from './FAQPage';
 
 const App = () => {
@@ -61,7 +62,7 @@ This molecule provides flexibility for customization to suit your application's 
 
 You can customize the theme colors by modifying the values in the `config.json` file. The theme object contains `primaryColor` and `secondaryColor` properties, allowing you to specify the colors according to your brand or design preferences.
 
-```
+```json
 "theme": {
   "primaryColor": {
     "value": "#219653",
@@ -80,7 +81,7 @@ To add custom actions for contact us or download user manual, follow below steps
 
 - **Contact Functionality**: Implement the contact support logic within the `handleContactClick` function. You can use call or email options to connect with the required team.
 
-```
+```tsx
 const handleContactClick = useCallback(()=>{
     console.log(component.contactText ??"Contact User")  //Implement your contact user logic here
   },[])
@@ -88,7 +89,7 @@ const handleContactClick = useCallback(()=>{
 
 - **User Manual Functionality**: Implement the download manual logic within the `downloadPDFHandler` function.
 
-```
+```tsx
 const downloadPDFHandler=useCallback(()=>{
     console.log(component.userManualText ?? "User Manual")  //Implement your download logic here
   },[])
@@ -97,7 +98,7 @@ const downloadPDFHandler=useCallback(()=>{
 ### Updating Component
 You can update the component keys by modifying the `key` value in the `config.json` file.
 
-```
+```tsx
 "component": {
       "allowOverride": false,
       "title": "FAQs",

@@ -36,8 +36,19 @@ export default App;
 
 The Navbar component is a React functional component responsible for rendering a navigation bar at the top of the application. It utilizes Material-UI components for styling and functionality.
  
+- The component is structured using Material-UI components such as AppBar, Toolbar, and IconButton for styling and functionality.
 
-## Features
+- Configuration for the component is provided via a JSON file imported as config.
+
+- State management is handled using React's useState hook, toggling the visibility of the sidebar.
+
+- The sidebar is rendered conditionally based on the state of isSidebarOpen.
+
+- The component utilizes custom hooks from a theme provider for managing theme-related functionality.
+
+- The appearance and behavior of the component can be customized by modifying the values in the config file.
+
+## Functionality
 
 - *Hamburger Menu*: If enabled through configuration, a hamburger menu icon is displayed on the left side of the toolbar. Clicking this icon toggles the sidebar open and closed.
 
@@ -51,19 +62,8 @@ The Navbar component is a React functional component responsible for rendering a
 
 - *Theme Picker*: A component allowing the user to select different themes for the application is rendered on the right side of the toolbar.
 
-## Implementation Details
+ 
 
-- The component is structured using Material-UI components such as AppBar, Toolbar, and IconButton for styling and functionality.
-
-- Configuration for the component is provided via a JSON file imported as config.
-
-- State management is handled using React's useState hook, toggling the visibility of the sidebar.
-
-- The sidebar is rendered conditionally based on the state of isSidebarOpen.
-
-- The component utilizes custom hooks from a theme provider for managing theme-related functionality.
-
-- The appearance and behavior of the component can be customized by modifying the values in the config file.
 
 
 

@@ -28,7 +28,7 @@ The asset folder within the molecule serves as a centralized location for storin
 
 This file allows you to customize various aspects of your molecule without directly modifying the source code, making it easier to manage and maintain. The config.json file follows a structured format, typically in JSON (JavaScript Object Notation), where each configuration setting is defined as a key-value pair. Below is an example of the structure:
 
-```
+```json
 {
   "component": {
     "allowOverride": false,
@@ -43,7 +43,7 @@ This file allows you to customize various aspects of your molecule without direc
 
 The index.tsx file is used as the entry point for a specific molecule within the application. This file serves as the main file that other parts of the molecule can import to use the functionality provided by the component.
 
-```
+```tsx
 import React, { useCallback } from 'react';
 import styles from './index.module.css';
 import Box from '@mui/material/Box';
@@ -82,7 +82,7 @@ export default Component;
 
 The index.module.css file is a CSS Module file commonly used to provide scoped styling for component. CSS Modules offer a way to encapsulate styles by generating unique class names for each component, preventing style conflicts and promoting modularity within your molecule.
 
-```
+```css
 .container{
   width: 100%;
   height: 100%;
@@ -104,7 +104,7 @@ The index.stories.tsx file is a `TypeScript` file commonly used in conjunction w
 The index.test.tsx file is a TypeScript file used to define and execute unit tests that verify the behavior and functionality of the molecule. These tests ensure that component renders correctly, handle user interactions appropriately, and maintain expected behavior across different scenarios.
 Below is an example of how index.test.tsx can be used to write unit tests:
 
-```
+```tsx
 import React from 'react';
 import { render } from '@testing-library/react';
 import Component from './index';
@@ -128,7 +128,7 @@ After designing the molecule, add the molecule in the `index.json` file inside t
 - If the molecule is a separate page then it should be added in `pages`
 - If the molecule is a sub-component then it should be added in `molecules`
 
-```
+```json
 {
   "pages": [
     "otp-page",
@@ -154,7 +154,7 @@ After designing the molecule, add the molecule in the `index.json` file inside t
 ### How and Where to Import a Molecule
 - All the `page` molecules are imported within the `App.tsx` file. This allows you to associate the imported component with a particular route path.
 
-```
+```tsx
 import { Navbar } from "./components/navbar";
 import { Route, Routes } from "react-router-dom";
 import LoginPage from "./molecules/login-mobile-aadhar-page";
