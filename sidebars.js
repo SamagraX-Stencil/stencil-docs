@@ -4,19 +4,49 @@ module.exports = {
       type: 'category',
       label: 'Stencil',
       collapsed: false,
-      items: ['home','development_setup'],
+      items: ['home', 'development_setup'],
+    },
+    {
+      type: 'category',
+      label: 'Stencil Web',
+      collapsed: false,
+      items: ['stencilweb/overview'],
     },
     {
       type: 'category',
       label: 'Bot Creation Config',
       collapsed: false,
-      items: ['config/overview','config/intro' ,'config/details', 'config/renderConfig' ,'config/addNewInput']
+      items: ['config/overview', 'config/intro', 'config/details', 'config/renderConfig', 'config/addNewInput'],
+    },
+    {
+      type: 'category',
+      label: 'Pages',
+      collapsed: false,
+      items: ['pages/otpPage'],
     },
     {
       type: 'category',
       label: 'Molecules',
       collapsed: false,
-      items: ['molecules/overview', 'molecules/createNewMolecule', 'molecules/loginMobileAadharPage', 'molecules/otpPage', 'molecules/feedbackPage','molecules/downtimePage','molecules/comingSoonPage','molecules/faqPage', 'molecules/navbar' , 'molecules/sidebar' , 'molecules/voiceRecorder', 'molecules/Historypage', 'molecules/launchPage', 'molecules/chatui' , 'molecules/homePage', 'molecules/messageItem', 'molecules/shareButtons']
+      items: [
+        'molecules/overview',
+        'molecules/createNewMolecule',
+        'molecules/loginMobileAadharPage',
+        'molecules/otpPage',
+        'molecules/feedbackPage',
+        'molecules/downtimePage',
+        'molecules/comingSoonPage',
+        'molecules/faqPage',
+        'molecules/navbar',
+        'molecules/sidebar',
+        'molecules/voiceRecorder',
+        'molecules/Historypage',
+        'molecules/launchPage',
+        'molecules/chatui',
+        'molecules/homePage',
+        'molecules/messageItem',
+        'molecules/shareButtons',
+      ],
     },
     {
       type: 'category',
@@ -45,7 +75,7 @@ module.exports = {
       type: 'category',
       label: 'CLI',
       collapsed: false,
-      items: ['cli/introduction', 'cli/installation']
+      items: ['cli/introduction', 'cli/installation'],
     },
     {
       type: 'category',
