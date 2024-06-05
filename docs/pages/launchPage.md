@@ -10,7 +10,7 @@ sidebar_label: Launch Page
 
 The `LaunchPage` component is a React page designed as the initial landing page for the application. It showcases branding elements such as a logo and a label.
 
-<img src= "/img/molecules/launchPage.png" alt="History Page Molecule" />
+<img src="/img/molecules/launchPage.png" alt="History Page Molecule" />
 
 ## Usage
 
@@ -18,13 +18,10 @@ The `LaunchPage` component is a React page designed as the initial landing page 
 import LaunchPage from './launchPage';
 
 const App = () => {
-  return (
-    <LaunchPage />
-  );
-}
+  return <LaunchPage />;
+};
 
 export default App;
-
 ```
 
 ## Description
@@ -35,15 +32,12 @@ The `LaunchPage` molecule consists of the following elements:
 
 ## Functionality
 
- - The LaunchPage component provides a static display of branding elements and does not offer interactive functionality by default.
+- The LaunchPage component provides a static display of branding elements and does not offer interactive functionality by default.
 
 ## Dependencies
 
 - React: JavaScript library for building user interfaces.
 - Material-UI (Mui): React components for faster and easier web development.
- 
-
- 
 
 ## Styling
 
@@ -52,27 +46,24 @@ The `LaunchPage` molecule consists of the following elements:
 
 ## Customization
 
- The **LaunchPage** component offers flexibility for customization to match your application's requirements. Here are some customization options:
+The **LaunchPage** component offers flexibility for customization to match your application's requirements. Here are some customization options:
+
 ### Theme Customization
 
 Modify the colors and styles in the `index.module.css` file to match your application's design.
 
+### Component Configuration
 
-### Component Configuration 
+Update the component object in the config.json file to customize the title and other configurations
 
- Update the component object in the config.json file to customize the title and other configurations
+```json
+"component": {
+     "allowOverride": false,
+     "logo": "src/pages/launch-page/your_logo.png",
+     "showLaunchPage": false
+ }
 
- ```json
- "component": {
-      "allowOverride": false,
-      "logo": "src/pages/launch-page/your_logo.png",
-      "label": "Your Branding Label"
-  }
-
- ```
-
- 
- 
+```
 
 ## Notes
 

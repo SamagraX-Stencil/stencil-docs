@@ -18,10 +18,8 @@ The `LoginMobileAadharPage` molecule is a React component designed for user auth
 import LoginMobileAadharPage from './LoginMobileAadharPage';
 
 const App = () => {
-  return (
-    <LoginMobileAadharPage />
-  );
-}
+  return <LoginMobileAadharPage />;
+};
 
 export default App;
 ```
@@ -121,12 +119,20 @@ const handleRegistration = () => {
 ```
 
 ### Updating Component Title
-You can update the component title by modifying the `title` value in the `config.json` file.
+
+You can update the component keys by modifying the `key` value in the `config.json` file.
 
 ```
 "component": {
-  "allowOverride": false,
-  "title": "Welcome to Login Page!"
+      "allowOverride": false,
+      "loginWithAadhaar": false,
+      "showSignUp": false,
+      "showAlternateSignIn": false,
+      "showLogo": false,
+      "showSplitedView": true,
+      "logo": "https://seeklogo.com/images/C/corporate-company-logo-749CEE6ADC-seeklogo.com.png",
+      "logowidth": "320px",
+      "logoheight": "280px",
 }
 ```
 

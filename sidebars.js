@@ -23,7 +23,6 @@ module.exports = {
       label: 'Pages',
       collapsed: false,
       items: [
-        'pages/otpPage',
         'pages/comingSoonPage',
         'pages/downtimePage',
         'pages/faqPage',
@@ -32,6 +31,7 @@ module.exports = {
         'pages/homePage',
         'pages/launchPage',
         'pages/loginMobileAadharPage',
+        'pages/otpPage',
       ],
     },
     {

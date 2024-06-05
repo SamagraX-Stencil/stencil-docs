@@ -4,16 +4,15 @@ sidebar_label: Feedback page
 ---
 
 <head>
-    <title> Feedback page </title>
-    <meta name="description" content="your meta content goes here" />
+  <title> Feedback page </title>
+  <meta name="description" content="your meta content goes here" />
 </head>
 
 The `FeedbackPage` molecule is a React component designed for user review and rating about the app. It provides a user-friendly interface for users to rate/review and submit.
 
 <img src="/img/molecules/feedbackReviewAndRatingPage.png" alt="Feedback Page" />
 
-
-## Usage 
+## Usage
 
 ```
 
@@ -100,12 +99,14 @@ const handleFeedback = () => {
 ```
 
 ### Updating Component Title
-You can update the component title by modifying the `title` value in the `config.json` file.
+
+You can update the component keys by modifying the `key` value in the `config.json` file.
 
 ```
 "component": {
-  "allowOverride": false,
-  "title": "Welcome to Feedback Page!"
+  "ratingBox": true,
+  "reviewBox": true,
+  "ratingMaxStars": 5
 }
 
 ```

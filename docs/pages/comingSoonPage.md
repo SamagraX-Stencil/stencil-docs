@@ -8,7 +8,7 @@ sidebar_label: Coming Soon Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `Coming Soon` molecule is a React component designed to inform visitors about upcoming features, products, or events. It acts as a temporary placeholder until the anticipated content or functionality is ready for launch. 
+The `Coming Soon` molecule is a React component designed to inform visitors about upcoming features, products, or events. It acts as a temporary placeholder until the anticipated content or functionality is ready for launch.
 
 <img src="/img/molecules/comingSoonPage.png" alt="ComingSoon Page Molecule" />
 
@@ -18,10 +18,8 @@ The `Coming Soon` molecule is a React component designed to inform visitors abou
 import ComingSoonPage from './ComingSoonPage';
 
 const App = () => {
-  return (
-    <ComingSoonPage />
-  );
-}
+  return <ComingSoonPage />;
+};
 
 export default App;
 ```
@@ -76,25 +74,23 @@ You can customize the theme colors by modifying the values in the `config.json` 
 ### Adding Custom Actions
 
 To add custom actions for previous page feature, follow below steps:
-  
-  - **Previous Page Functionality**: Implement the previous page logic within the `handleBack` function. You can use back() method to go to the previous page.
 
-  ```tsx
-  const handleBack = useCallback(()=>{
-    // window?.history?.back()
-    console.log(component.backText ?? "Back Button")
-  },[])
-  ```
+- **Previous Page Functionality**: Implement the previous page logic within the `handleBack` function. You can use back() method to go to the previous page.
+
+```tsx
+const handleBack = useCallback(() => {
+  // window?.history?.back()
+  console.log(component.backText ?? 'Back Button');
+}, []);
+```
 
 ### Updating Component
+
 You can update the component keys by modifying the `key` value in the `config.json` file.
 
 ```json
 "component": {
     "allowOverride": false,
-    "title": "Coming Soon!",
-    "description": "We are going to launch this feature very soon. Stay tuned!",
-    "backText": "Back"
   }
 ```
 

@@ -18,10 +18,8 @@ The `DowntimePage` molecule is a React component designed to inform users when w
 import DowntimePage from './DowntimePage';
 
 const App = () => {
-  return (
-    <DowntimePage />
-  );
-}
+  return <DowntimePage />;
+};
 
 export default App;
 ```
@@ -83,41 +81,37 @@ To add custom actions for contact us, refresh or previuos page button, follow be
 - **Contact Functionality**: Implement the contact support logic within the `handleContactUserClick` function. You can use call or email options to connect with the required team.
 
 ```tsx
-const handleContactUserClick = useCallback(()=>{
-    console.log(component.contactLink ?? "Contact Details") //Implement your contact user logic here
-  }, [])
+const handleContactUserClick = useCallback(() => {
+  console.log(component.contactLink ?? 'Contact Details'); //Implement your contact user logic here
+}, []);
 ```
 
 - **Refresh Functionality**: Implement the refresh logic within the `handleRefreshClick` function. You can use reload() method to refresh the page.
 
 ```tsx
-const handleRefreshClick = useCallback(()=>{
-    // window?.location.reload()
-    console.log(component.refreshText ?? "Contact Details")
-  }, [])
-  ```
-  
-  - **Previous Page Functionality**: Implement the previous page logic within the `handlePreviousClick` function. You can use back() method to go to the previous page.
+const handleRefreshClick = useCallback(() => {
+  // window?.location.reload()
+  console.log(component.refreshText ?? 'Contact Details');
+}, []);
+```
 
-  ```tsx
-  const handlePreviousClick = useCallback(()=>{
-      // window?.history.back();
-      console.log(component.previousPageText ?? "Contact Details")
-  }, [])
-  ```
+- **Previous Page Functionality**: Implement the previous page logic within the `handlePreviousClick` function. You can use back() method to go to the previous page.
+
+```tsx
+const handlePreviousClick = useCallback(() => {
+  // window?.history.back();
+  console.log(component.previousPageText ?? 'Contact Details');
+}, []);
+```
 
 ### Updating Component
+
 You can update the component keys by modifying the `key` value in the `config.json` file.
 
 ```json
 "component": {
       "allowOverride": false,
-      "title": "We're under maintainance",
       "downTimeImage": "/src/pages/downtime-page/assets/downTimeGIF.gif",
-      "supportingText": "Have an urgent query?",
-      "contactLink": "Call Ama Krushi",
-      "refreshText": "Try Again",
-      "previousPageText": "Previous Page"
   }
 ```
 
