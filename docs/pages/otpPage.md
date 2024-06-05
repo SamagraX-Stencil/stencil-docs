@@ -115,7 +115,7 @@ You can update the component title by modifying the `title` value in the `config
      "logo": "https://seeklogo.com/images/C/corporate-company-logo-749CEE6ADC-seeklogo.com.png",
      "showLogo": false,
      "otpLength": 4,
-     "resendOtpTimer": "30",
+     "resendOtpTimer": 30,
      "showSplitedView": true,
 }
 ```

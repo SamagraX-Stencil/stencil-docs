@@ -58,7 +58,7 @@ The ChatUI component offers flexibility for customization through its configurat
       "transliterationApi": "https://ai-tools-proxy.dev.bhasai.samagra.io",
       "allowTransliteration": true,
       "transliterationProvider": "bhashini",
-      "transliterationSuggestions": "3",
+      "transliterationSuggestions": 3,
       "transliterationInputLanguage": "en",
       "transliterationOutputLanguage": "hi"
 
