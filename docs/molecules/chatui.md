@@ -50,28 +50,18 @@ The ChatUI component offers flexibility for customization through its configurat
 ```json
 
   "component": {
-     
-  
+
+
       "allowOverride": false,
-      "placeholder": "Ask Your Question",
       "allowFeedback": true,
-      "positiveFeedbackText": "Helpful",
-      "negativeFeedbackText": "Not Helpful",
       "allowTextToSpeech": true,
-      "textToSpeechLabel": "Click to hear",
-      "allowShareChat": true,
-      "shareChatText": "Share",
-      "allowDownloadChat": true,
-      "downloadChatText": "Download",
+      "transliterationApi": "https://ai-tools-proxy.dev.bhasai.samagra.io",
       "allowTransliteration": true,
-      "transliterationApi": "",
-      "transliterationInputLanguage": "",
-      "transliterationOutputLanguage": "",
-      "transliterationProvider": "",
-      "transliterationSuggestions": 3,
-      "rightAction": null,
-      "leftAction": null
-  
+      "transliterationProvider": "bhashini",
+      "transliterationSuggestions": "3",
+      "transliterationInputLanguage": "en",
+      "transliterationOutputLanguage": "hi"
+
   }
 ```
 

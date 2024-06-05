@@ -98,7 +98,7 @@ const handleFeedback = () => {
 };
 ```
 
-### Updating Component Title
+### Updating Component
 
 You can update the component keys by modifying the `key` value in the `config.json` file.
 

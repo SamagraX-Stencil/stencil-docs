@@ -63,8 +63,6 @@ Update the component object in the config.json file to customize the title and o
 {
   "component": {
     "allowOverride": false,
-    "title": "History",
-    "noItemsText": "No  Conversation History",
     "allowDelete": true,
     "showTimestamp": true,
     "historyShowHistoryPage": true

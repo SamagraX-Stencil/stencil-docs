@@ -101,7 +101,6 @@ Update the component object in the config.json file to customize various aspects
 
 "component": {
      "allowOverride": false,
-     "title": "Ask me anything about farming",
      "showKalia": false,
      "showWeatherAdvisory": true,
      "showPlantProtection": true,
