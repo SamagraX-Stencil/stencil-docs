@@ -10,7 +10,7 @@ sidebar_label: Feedback page
 
 The `FeedbackPage` is a React component designed for user review and rating about the app. It provides a user-friendly interface for users to rate/review and submit.
 
-<img src="/img/molecules/feedbackReviewAndRatingPage.png" alt="Feedback Page" />
+<img src="/img/pages/feedbackReviewAndRatingPage.png" alt="Feedback Page" />
 
 ## Usage
 

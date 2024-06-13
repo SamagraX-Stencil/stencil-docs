@@ -10,7 +10,7 @@ sidebar_label: Coming Soon Page
 
 The `Coming Soon` Page is a React component designed to inform visitors about upcoming features, products, or events. It acts as a temporary placeholder until the anticipated content or functionality is ready for launch.
 
-<img src="/img/molecules/comingSoonPage.png" alt="ComingSoon Page" />
+<img src="/img/pages/comingSoonPage.png" alt="ComingSoon Page" />
 
 ## Usage
 

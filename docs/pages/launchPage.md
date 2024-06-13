@@ -10,7 +10,7 @@ sidebar_label: Launch Page
 
 The `LaunchPage` component is a React page designed as the initial landing page for the application. It showcases branding elements such as a logo and a label.
 
-<img src="/img/molecules/launchPage.png" alt="History Page" />
+<img src="/img/pages/launchPage.png" alt="History Page" />
 
 ## Usage
 

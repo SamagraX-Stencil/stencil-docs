@@ -10,7 +10,7 @@ sidebar_label: Downtime Page
 
 The `DowntimePage` is a React component designed to inform users when website or online service is temporarily unavailable. The goal is to provide users with clear communication about the situation by keeping them informed.
 
-<img src="/img/molecules/downtimePage.png" alt="Downtime Page" />
+<img src="/img/pages/downtimePage.png" alt="Downtime Page" />
 
 ## Usage
 

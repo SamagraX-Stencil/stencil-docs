@@ -10,7 +10,7 @@ sidebar_label: Login Mobile Aadhar Page
 
 The `LoginMobileAadharPage` is a React component designed for user authentication using either mobile phone numbers or Aadhar numbers. It provides a user-friendly interface for users to input their credentials and login.
 
-<img src="/img/molecules/loginMobileAadharPage.png" alt="Login Mobile Aadhar Page" />
+<img src="/img/pages/loginMobileAadharPage.png" alt="Login Mobile Aadhar Page" />
 
 ## Usage
 

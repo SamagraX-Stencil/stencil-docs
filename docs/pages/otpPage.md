@@ -10,7 +10,7 @@ sidebar_label: OTP Page
 
 The `OtpPage` is a React component designed for OTP (One-Time Password) verification. It allows users to enter the OTP sent to their mobile number for authentication purposes.
 
-<img src="/img/molecules/otpPage.png" alt="OTP Page" />
+<img src="/img/pages/otpPage.png" alt="OTP Page" />
 
 ## Usage
 

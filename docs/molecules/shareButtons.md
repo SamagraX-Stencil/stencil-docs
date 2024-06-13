@@ -94,7 +94,9 @@ You can select weather which functionality you want by simply modifying `allowDo
 ```json
 "component": {
       "allowDownloadChat": true,
-      "allowShareChat": true
+      "allowShareChat": true,
+      "shareButtonColor": "#1e6231",
+      "downloadButtonColor": "#1e6231"
     }
 
 ```

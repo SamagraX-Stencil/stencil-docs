@@ -10,7 +10,7 @@ sidebar_label: Faq Page
 
 The `FAQ` Page is a React component serves as a centralized repository of answers to common queries that users may have about a product, service, or topic. It's designed to address recurring concerns, provide clarification, and offer solutions to common issues, thereby enhancing user experience and reducing support inquiries.
 
-<img src="/img/molecules/faqPage.png" alt="Faq Page" />
+<img src="/img/pages/faqPage.png" alt="Faq Page" />
 
 ## Usage
 
