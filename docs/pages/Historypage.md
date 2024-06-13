@@ -10,7 +10,7 @@ sidebar_label: History Page
 
 The `HistoryPage` component is a React page that displays a list of historical chat interactions. It allows users to view past conversations and delete them if needed.
 
-<img src="/img/molecules/historypage.png" alt="History Page Molecule" />
+<img src="/img/molecules/historypage.png" alt="History Page" />
 
 ## Usage
 
@@ -26,7 +26,7 @@ export default App;
 
 ## Description
 
-The `HistoryPage` molecule consists of the following elements:
+The `HistoryPage` consists of the following elements:
 
 - It provides a list of past chat interactions for users to review.
 - Users can delete individual conversations from the history.

@@ -8,9 +8,9 @@ sidebar_label: OTP Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `OtpPage` molecule is a React component designed for OTP (One-Time Password) verification. It allows users to enter the OTP sent to their mobile number for authentication purposes.
+The `OtpPage` is a React component designed for OTP (One-Time Password) verification. It allows users to enter the OTP sent to their mobile number for authentication purposes.
 
-<img src="/img/molecules/otpPage.png" alt="OTP Page Molecule" />
+<img src="/img/molecules/otpPage.png" alt="OTP Page" />
 
 ## Usage
 
@@ -26,7 +26,7 @@ export default App;
 
 ## Description
 
-The `OtpPage` molecule consists of the following elements:
+The `OtpPage` consists of the following elements:
 
 - Input field for entering the OTP.
 - Button to submit the OTP for verification.
@@ -62,7 +62,7 @@ The `OtpPage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 
@@ -109,7 +109,7 @@ You can update the component title by modifying the `title` value in the `config
 
 ```json
 "component": {
-     "logo": "https://seeklogo.com/images/C/corporate-company-logo-749CEE6ADC-seeklogo.com.png",
+     "logo": "",
      "showLogo": false,
      "otpLength": 4,
      "resendOtpTimer": 30,
@@ -123,6 +123,6 @@ For further customization, you can modify the component's styling by editing the
 
 ## Notes
 
-- This molecule does not handle actual OTP verification. It simulates the verification process by displaying a success message upon entering the correct OTP.
+- This page does not handle actual OTP verification. It simulates the verification process by displaying a success message upon entering the correct OTP.
 - The OTP length is hardcoded to 4 digits.
 - For further customization, you can modify the JSX structure, styles, and functionality according to your application's needs.

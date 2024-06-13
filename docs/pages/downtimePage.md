@@ -8,9 +8,9 @@ sidebar_label: Downtime Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `DowntimePage` molecule is a React component designed to inform users when website or online service is temporarily unavailable. The goal is to provide users with clear communication about the situation by keeping them informed.
+The `DowntimePage` is a React component designed to inform users when website or online service is temporarily unavailable. The goal is to provide users with clear communication about the situation by keeping them informed.
 
-<img src="/img/molecules/downtimePage.png" alt="Downtime Page Molecule" />
+<img src="/img/molecules/downtimePage.png" alt="Downtime Page" />
 
 ## Usage
 
@@ -26,7 +26,7 @@ export default App;
 
 ## Description
 
-The `DowntimePage` molecule consists of the following elements:
+The `DowntimePage` consists of the following elements:
 
 - Contact Us button to contact support during downtime.
 - Try Again button to refresh the tab.
@@ -34,7 +34,7 @@ The `DowntimePage` molecule consists of the following elements:
 
 ## Functionality
 
-- This molecule will be displayed when the website is under maintainance.
+- This Page will be displayed when the website is under maintainance.
 - Users can refresh the page by using Try Again button.
 - By clicking Contact Us button, user can contact the support team.
 
@@ -55,7 +55,7 @@ The `DowntimePage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This Page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 
@@ -108,7 +108,9 @@ You can update the component keys by modifying the `key` value in the `config.js
 
 ```json
 "component": {
-      "downTimeImage": "/src/pages/downtime-page/assets/downTimeGIF.gif",
+      "downTimeImage": "",
+      "downtimeShowCallBox": false,
+      "downtimePhoneNumber": ""
   }
 ```
 

@@ -8,7 +8,7 @@ sidebar_label: Feedback page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `FeedbackPage` molecule is a React component designed for user review and rating about the app. It provides a user-friendly interface for users to rate/review and submit.
+The `FeedbackPage` is a React component designed for user review and rating about the app. It provides a user-friendly interface for users to rate/review and submit.
 
 <img src="/img/molecules/feedbackReviewAndRatingPage.png" alt="Feedback Page" />
 
@@ -29,7 +29,7 @@ export default App
 
 ## Description
 
-The `FeedbackPage` molecule consists of the following elements:
+The `FeedbackPage` consists of the following elements:
 
 - Star rating element to rate the website.
 - Submit review button for sending the review of user.
@@ -67,7 +67,7 @@ The `FeedbackPage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This Page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 
@@ -111,5 +111,5 @@ You can update the component keys by modifying the `key` value in the `config.js
 
 ## Notes
 
-- This molecule does not handle actual submission of rate and review. It simulates the process by displaying a success message upon clicking the submit review button.
+- This Page does not handle actual submission of rate and review. It simulates the process by displaying a success message upon clicking the submit review button.
 - For further customization, you can modify the JSX structure, styles, and functionality according to your application's needs.

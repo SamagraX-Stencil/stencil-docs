@@ -8,9 +8,9 @@ sidebar_label: Faq Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `FAQ` molecule is a React component serves as a centralized repository of answers to common queries that users may have about a product, service, or topic. It's designed to address recurring concerns, provide clarification, and offer solutions to common issues, thereby enhancing user experience and reducing support inquiries.
+The `FAQ` Page is a React component serves as a centralized repository of answers to common queries that users may have about a product, service, or topic. It's designed to address recurring concerns, provide clarification, and offer solutions to common issues, thereby enhancing user experience and reducing support inquiries.
 
-<img src="/img/molecules/faqPage.png" alt="Faq Page Molecule" />
+<img src="/img/molecules/faqPage.png" alt="Faq Page" />
 
 ## Usage
 
@@ -26,14 +26,14 @@ export default App;
 
 ## Description
 
-The `FAQPage` molecule consists of the following elements:
+The `FAQPage` consists of the following elements:
 
 - User Manual button is used to download document designed to assist users in effectively using the product.
 - Contact Us button to contact support during any query.
 
 ## Functionality
 
-- This molecule will be used to solve product related queries and doubts.
+- This Page will be used to solve product related queries and doubts.
 - By clicking Contact Us button, user can contact the support team.
 
 ## Dependencies
@@ -53,7 +53,7 @@ The `FAQPage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This Page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 
@@ -96,9 +96,11 @@ You can update the component keys by modifying the `key` value in the `config.js
 
 ```tsx
 "component": {
-     "showFaqPage": true,
-      "faqManualPdfLink": "/src/pages/faq-page/assets/manual.pdf",
-      "faqShowPdfButton": true
+      "showFaqPage": false,
+      "faqManualPdfLink": "",
+      "faqShowPdfButton": false,
+      "faqShowCallBox": false,
+      "faqPhoneNumber": ""
   }
 ```
 

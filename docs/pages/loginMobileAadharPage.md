@@ -8,9 +8,9 @@ sidebar_label: Login Mobile Aadhar Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `LoginMobileAadharPage` molecule is a React component designed for user authentication using either mobile phone numbers or Aadhar numbers. It provides a user-friendly interface for users to input their credentials and login.
+The `LoginMobileAadharPage` is a React component designed for user authentication using either mobile phone numbers or Aadhar numbers. It provides a user-friendly interface for users to input their credentials and login.
 
-<img src="/img/molecules/loginMobileAadharPage.png" alt="Login Mobile Aadhar Page Molecule" />
+<img src="/img/molecules/loginMobileAadharPage.png" alt="Login Mobile Aadhar Page" />
 
 ## Usage
 
@@ -26,7 +26,7 @@ export default App;
 
 ## Description
 
-The `LoginMobileAadharPage` molecule consists of the following elements:
+The `LoginMobileAadharPage` consists of the following elements:
 
 - Input field for either mobile phone number or Aadhar number.
 - Toggle button to switch between mobile phone number and Aadhar number inputs.
@@ -67,7 +67,7 @@ The `LoginMobileAadharPage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 
@@ -135,6 +135,6 @@ You can update the component keys by modifying the `key` value in the `config.js
 
 ## Notes
 
-- This molecule does not handle actual authentication. It simulates the login process by displaying a success message upon clicking the login button.
-- The registration functionality is not implemented in this molecule.
+- This page does not handle actual authentication. It simulates the login process by displaying a success message upon clicking the login button.
+- The registration functionality is not implemented in this page.
 - For further customization, you can modify the JSX structure, styles, and functionality according to your application's needs.

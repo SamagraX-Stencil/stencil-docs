@@ -8,9 +8,9 @@ sidebar_label: Coming Soon Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `Coming Soon` molecule is a React component designed to inform visitors about upcoming features, products, or events. It acts as a temporary placeholder until the anticipated content or functionality is ready for launch.
+The `Coming Soon` Page is a React component designed to inform visitors about upcoming features, products, or events. It acts as a temporary placeholder until the anticipated content or functionality is ready for launch.
 
-<img src="/img/molecules/comingSoonPage.png" alt="ComingSoon Page Molecule" />
+<img src="/img/molecules/comingSoonPage.png" alt="ComingSoon Page" />
 
 ## Usage
 
@@ -26,13 +26,13 @@ export default App;
 
 ## Description
 
-The `ComingSoonPage` molecule consists of the following elements:
+The `ComingSoonPage` consists of the following elements:
 
 - Back button to go on previous page.
 
 ## Functionality
 
-- This molecule will be displayed until the upcoming functionality is ready for launch.
+- This Page will be displayed until the upcoming functionality is ready for launch.
 - Users can go to previous page by using Back button.
 
 ## Dependencies
@@ -52,7 +52,7 @@ The `ComingSoonPage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This Page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 

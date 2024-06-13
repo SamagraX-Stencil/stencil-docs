@@ -51,7 +51,6 @@ The ChatUI component offers flexibility for customization through its configurat
 
   "component": {
 
-
       "allowFeedback": true,
       "allowTextToSpeech": true,
       "transliterationApi": "",

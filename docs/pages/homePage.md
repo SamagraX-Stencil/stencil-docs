@@ -10,7 +10,7 @@ sidebar_label: Home Page
 
 The HomePage component is a React page designed to serve as the main interface for users to interact with the application. It allows users to input messages or questions, view relevant buttons for actions, and optionally display a voice recorder.
 
-<img src="/img/molecules/homePage.png" alt="Home Page Molecule" />
+<img src="/img/molecules/homePage.png" alt="Home Page" />
 
 ## Usage
 
@@ -109,6 +109,8 @@ Update the component object in the config.json file to customize various aspects
      "topGap": "120px",
      "micWidth": "143px",
      "micHeight": "143px",
+     "showTapToSpeakText": false
+
 }
 
 ```
