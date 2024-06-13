@@ -52,10 +52,9 @@ The ChatUI component offers flexibility for customization through its configurat
   "component": {
 
 
-      "allowOverride": false,
       "allowFeedback": true,
       "allowTextToSpeech": true,
-      "transliterationApi": "https://ai-tools-proxy.dev.bhasai.samagra.io",
+      "transliterationApi": "",
       "allowTransliteration": true,
       "transliterationProvider": "bhashini",
       "transliterationSuggestions": 3,
@@ -72,12 +71,10 @@ The component utilizes CSS modules for styling. Theme colors can be configured t
 ```json
   "theme":
     "primaryColor": {
-      "allowOverride": true,
-      "value": "#fff"
+            "value": "#fff"
     },
     "secondaryColor": {
-      "allowOverride": true,
-      "value": "#219653"
+            "value": "#219653"
     }
 ```
 

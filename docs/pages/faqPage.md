@@ -63,12 +63,10 @@ You can customize the theme colors by modifying the values in the `config.json` 
 "theme": {
   "primaryColor": {
     "value": "#219653",
-    "allowOverride": true
-  },
+     },
   "secondaryColor": {
     "value": "#828282",
-    "allowOverride": true
-  }
+     }
 }
 ```
 

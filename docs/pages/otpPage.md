@@ -72,11 +72,9 @@ The component's theme colors can be easily customized by updating the values in 
 "theme": {
   "primaryColor": {
     "value": "#ffa500",
-    "allowOverride": true
   },
   "secondaryColor": {
     "value": "#1E232C",
-    "allowOverride": true
   }
 }
 ```
@@ -111,7 +109,6 @@ You can update the component title by modifying the `title` value in the `config
 
 ```json
 "component": {
-     "allowOverride": false,
      "logo": "https://seeklogo.com/images/C/corporate-company-logo-749CEE6ADC-seeklogo.com.png",
      "showLogo": false,
      "otpLength": 4,

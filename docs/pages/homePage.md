@@ -86,8 +86,7 @@ Modify the colors and styles in the config.json file to match your application's
 ```json
 "theme": {
     "primaryColor": {
-      "allowOverride": true,
-      "value": "#1e6231"
+            "value": "#1e6231"
     }
 }
 
@@ -100,7 +99,6 @@ Update the component object in the config.json file to customize various aspects
 ```json
 
 "component": {
-     "allowOverride": false,
      "showKalia": false,
      "showWeatherAdvisory": true,
      "showPlantProtection": true,

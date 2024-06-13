@@ -58,7 +58,6 @@ Update the component object in the config.json file to customize the title and o
 
 ```json
 "component": {
-     "allowOverride": false,
      "logo": "src/pages/launch-page/your_logo.png",
      "showLaunchPage": false
  }

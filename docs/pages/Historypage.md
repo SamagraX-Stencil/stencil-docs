@@ -62,7 +62,6 @@ Update the component object in the config.json file to customize the title and o
 ```json
 {
   "component": {
-    "allowOverride": false,
     "allowDelete": true,
     "showTimestamp": true,
     "historyShowHistoryPage": true

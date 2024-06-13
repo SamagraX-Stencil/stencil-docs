@@ -8,8 +8,6 @@ sidebar_label: Add New Input
   <meta name="description" content="your meta content goes here" />
 </head>
 
-
-
 To add a new element type to the `renderFormElement` function within a dynamic form system that uses a hierarchical configuration syntax, follow these steps. This guide will illustrate adding a hypothetical `DatePickerInput` element.
 
 ## Step 1: Define the New Input Component
@@ -31,13 +29,7 @@ const DatePickerInput = ({ source, label, defaultValue }) => {
   return (
     <div>
       <label htmlFor={source}>{label}</label>
-      <input
-        type="date"
-        id={source}
-        name={source}
-        value={value}
-        onChange={handleChange}
-      />
+      <input type="date" id={source} name={source} value={value} onChange={handleChange} />
     </div>
   );
 };
@@ -51,37 +43,28 @@ Modify the renderFormElement to accommodate the new input type. Add a case for h
 const renderSimpleElement = (config) => {
   switch (config.componentType) {
     // Existing cases...
-    
+
     case 'datePicker':
-      return (
-        <DatePickerInput
-          source={config.key}
-          label={config.key}
-          defaultValue={config.defaultValue}
-        />
-      );
+      return <DatePickerInput source={config.key} label={config.key} defaultValue={config.defaultValue} />;
 
     // Other cases remain as is
-   
   }
 };
-
 ```
 
-
 ## Step 3: Update the Configuration
+
 Adjust your configuration JSON to include the new DatePickerInput component by setting componentType to "datePicker".
 
 ```json
 {
-    "componentName": "Created Date",
-    "componentType": "datePicker",
-    "defaultValue": "28/02/2024",
-    "allowOverride": true,
-    "isAvailable": true,
-    "showInAdmin": true,
-    "props": {
-      "keyName": "createdAt"
-    }
+  "componentName": "Created Date",
+  "componentType": "datePicker",
+  "defaultValue": "28/02/2024",
+  "isAvailable": true,
+  "showInAdmin": true,
+  "props": {
+    "keyName": "createdAt"
   }
+}
 ```

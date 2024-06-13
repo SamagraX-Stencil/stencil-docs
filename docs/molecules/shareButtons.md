@@ -1,29 +1,27 @@
 ---
-title: Share and Download buttons 
+title: Share and Download buttons
 sidebar_label: Share & Download buttons
 ---
 
 <head>
-    <title> Share and Download buttons </title>
-    <meta name="description" content="your meta content goes here" />
+  <title> Share and Download buttons </title>
+  <meta name="description" content="your meta content goes here" />
 </head>
 
 The `share-buttons` molecule is a React component designed for users actions to share and download chat.
 
 <img src="/img/molecules/shareButtons.png" alt="Share button molecule" />
 
-## Usage 
+## Usage
 
 ```tsx
 import ShareButtons from './share-buttons';
 
 const App = () => {
-    return (
-        <ShareButtons />
-    );
-}
+  return <ShareButtons />;
+};
 
-export default App
+export default App;
 ```
 
 ## Description
@@ -57,7 +55,6 @@ The `ShareButtons` molecule consists of the following elements:
 ## Styling
 
 - CSS modules are used for styling the component.
- 
 
 ## Customization
 
@@ -71,12 +68,10 @@ You can customize the theme colors by modifying the values in the `config.json` 
 "theme": {
   "primaryColor": {
     "value": "#1e6231",
-    "allowOverride": true
-  },
+     },
   "secondaryColor": {
     "value": "#34a755",
-    "allowOverride": true
-  }
+     }
 }
 ```
 
@@ -88,16 +83,16 @@ To add custom actions such as downloading or sharing steps:
 
 ```tsx
 const downloadChat = async (type: string) => {
-    // perform your download chat logic here
-  };
+  // perform your download chat logic here
+};
 ```
 
 ### Accessing share and download button
+
 You can select weather which functionality you want by simply modifying `allowDownloadChat` and `allowShareChat` value in the `config.json` file.
 
 ```json
 "component": {
-      "allowOverride": false,
       "allowDownloadChat": true,
       "allowShareChat": true
     }

@@ -65,12 +65,10 @@ You can customize the theme colors by modifying the values in the `config.json` 
 "theme": {
   "primaryColor": {
     "value": "#219653",
-    "allowOverride": true
-  },
+     },
   "secondaryColor": {
     "value": "#828282",
-    "allowOverride": true
-  }
+     }
 }
 ```
 
@@ -110,7 +108,6 @@ You can update the component keys by modifying the `key` value in the `config.js
 
 ```json
 "component": {
-      "allowOverride": false,
       "downTimeImage": "/src/pages/downtime-page/assets/downTimeGIF.gif",
   }
 ```

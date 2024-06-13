@@ -3,17 +3,12 @@ title: How to Create a Molecule
 sidebar_label: Create New Molecule
 ---
 
-
-
 <head>
   <title> Create New Molecule </title>
-  <meta
-    name="description"
-    content="your meta content goes here"
-  />
+  <meta name="description" content="your meta content goes here" />
 </head>
 
-Start by designing a molecule in the [molecule repository](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/src/molecules). When doing so, create a new folder under `/src/molecules`. Consider the different configurations and customizations that could be applied to make the molecule versatile and visually appealing. 
+Start by designing a molecule in the [molecule repository](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/src/molecules). When doing so, create a new folder under `/src/molecules`. Consider the different configurations and customizations that could be applied to make the molecule versatile and visually appealing.
 The process of creating a molecule involves several steps.
 
 ## Folder Structure
@@ -31,7 +26,6 @@ This file allows you to customize various aspects of your molecule without direc
 ```json
 {
   "component": {
-    "allowOverride": false,
     "title": "Coming Soon!",
     "description": "We are going to launch this feature very soon. Stay tuned!",
     "backText": "Back"
@@ -49,28 +43,46 @@ import styles from './index.module.css';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import {component} from './config.json';
+import { component } from './config.json';
 import Hourglass from './hourglass';
 import { useColorPalates } from '../../molecules/theme-provider/hooks';
 
 const Component: React.FC = () => {
   const theme = useColorPalates();
-  const handleBack = useCallback(()=>{
+  const handleBack = useCallback(() => {
     // window?.history?.back()
-    console.log(component.backText ?? "Back Button")
-  },[])
+    console.log(component.backText ?? 'Back Button');
+  }, []);
 
   return (
     <>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
-        <Box className={styles.container}>
-          <Box><Typography variant='h4' sx={{color: theme?.primary?.main, fontWeight: "700"}}>{component.title ?? "Coming Soon"}</Typography></Box>
-          <Box><Hourglass fillColor={theme?.primary?.main}/></Box>
-          <Box><Typography variant='body1' sx={{fontWeight:"600", textAlign: "center"}}>{component.description?? "Coming Soon Description"}</Typography></Box>
-          <Box><Button variant='contained' className={styles.backButton} size='large' style={{backgroundColor: theme?.primary?.main}} onClick={handleBack}>{component.backText ?? "Back Button"}</Button></Box>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
+      <Box className={styles.container}>
+        <Box>
+          <Typography variant="h4" sx={{ color: theme?.primary?.main, fontWeight: '700' }}>
+            {component.title ?? 'Coming Soon'}
+          </Typography>
         </Box>
+        <Box>
+          <Hourglass fillColor={theme?.primary?.main} />
+        </Box>
+        <Box>
+          <Typography variant="body1" sx={{ fontWeight: '600', textAlign: 'center' }}>
+            {component.description ?? 'Coming Soon Description'}
+          </Typography>
+        </Box>
+        <Box>
+          <Button
+            variant="contained"
+            className={styles.backButton}
+            size="large"
+            style={{ backgroundColor: theme?.primary?.main }}
+            onClick={handleBack}
+          >
+            {component.backText ?? 'Back Button'}
+          </Button>
+        </Box>
+      </Box>
     </>
   );
 };
@@ -83,7 +95,7 @@ export default Component;
 The index.module.css file is a CSS Module file commonly used to provide scoped styling for component. CSS Modules offer a way to encapsulate styles by generating unique class names for each component, preventing style conflicts and promoting modularity within your molecule.
 
 ```css
-.container{
+.container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -112,19 +124,21 @@ import Component from './index';
 test('renders component with default props', () => {
   // Arrange
   const { getByTestId } = render(<Component />);
-  
+
   // Act
   const componentElement = getByTestId('component');
-  
+
   // Assert
   expect(componentElement).toBeInTheDocument();
 });
 ```
+
 ## Importing a Molecule
 
 Importing molecules is a straightforward process that involves identifying the component, importing it into the appropriate file, and using it within your TSX code. By following the guidelines, you can effectively integrate components into your React application.
 
 After designing the molecule, add the molecule in the `index.json` file inside the [molecules](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/src/molecules/index.json) folder. How the molecule is designed, accordingly it should be added in the object:
+
 - If the molecule is a separate page then it should be added in `pages`
 - If the molecule is a sub-component then it should be added in `molecules`
 
@@ -142,34 +156,30 @@ After designing the molecule, add the molecule in the `index.json` file inside t
     "home-page",
     "launch-page"
   ],
-  "molecules": [
-    "otp-input",
-    "chat-ui",
-    "share-buttons",
-    "voice-recorder",
-    "json-to-table"
-  ]
+  "molecules": ["otp-input", "chat-ui", "share-buttons", "voice-recorder", "json-to-table"]
 }
 ```
+
 ### How and Where to Import a Molecule
+
 - All the `page` molecules are imported within the `App.tsx` file. This allows you to associate the imported component with a particular route path.
 
 ```tsx
-import { Navbar } from "./components/navbar";
-import { Route, Routes } from "react-router-dom";
-import LoginPage from "./molecules/login-mobile-aadhar-page";
-import { Toaster } from "react-hot-toast";
-import Components from "./components";
-import OtpPage from "./molecules/otp-page";
-import HistoryPage from "./molecules/history-page";
-import ComingSoonPage from "./molecules/coming-soon-page";
-import DowntimePage from "./molecules/downtime-page";
-import FAQPage from "./molecules/faq-page";
-import LaunchPage from "./molecules/launch-page";
-import HomePage from "./molecules/home-page";
-import FeedbackPage from "./molecules/feedback";
-import ShareButtons from "./molecules/share-buttons";
-import { ChatUI } from "./molecules/chat-ui";
+import { Navbar } from './components/navbar';
+import { Route, Routes } from 'react-router-dom';
+import LoginPage from './molecules/login-mobile-aadhar-page';
+import { Toaster } from 'react-hot-toast';
+import Components from './components';
+import OtpPage from './molecules/otp-page';
+import HistoryPage from './molecules/history-page';
+import ComingSoonPage from './molecules/coming-soon-page';
+import DowntimePage from './molecules/downtime-page';
+import FAQPage from './molecules/faq-page';
+import LaunchPage from './molecules/launch-page';
+import HomePage from './molecules/home-page';
+import FeedbackPage from './molecules/feedback';
+import ShareButtons from './molecules/share-buttons';
+import { ChatUI } from './molecules/chat-ui';
 
 function App() {
   return (
@@ -178,7 +188,7 @@ function App() {
       <Navbar />
       <>
         <Routes>
-          <Route index element={<LoginPage />} /> 
+          <Route index element={<LoginPage />} />
           <Route path="/login-mobile-aadhar-page" element={<LoginPage />} />
           <Route path="/otp-page" element={<OtpPage />} />
           <Route path="/history-page" element={<HistoryPage />} />
@@ -189,11 +199,11 @@ function App() {
           <Route path="/coming-soon-page" element={<ComingSoonPage />} />
           <Route path="/downtime-page" element={<DowntimePage />} />
           <Route path="/faq-page" element={<FAQPage />} />
-          <Route path="/feedback-page" element={<FeedbackPage />}/>
+          <Route path="/feedback-page" element={<FeedbackPage />} />
           <Route path="/launch-page" element={<LaunchPage />} />
           <Route path="/share-buttons" element={<ShareButtons />} />
           <Route path="/chat-ui" element={<ChatUI />} />
-          <Route path="/molecules" element={<Components />}/>
+          <Route path="/molecules" element={<Components />} />
         </Routes>
       </>
     </>
