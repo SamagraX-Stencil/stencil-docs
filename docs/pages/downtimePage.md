@@ -8,9 +8,9 @@ sidebar_label: Downtime Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `DowntimePage` molecule is a React component designed to inform users when website or online service is temporarily unavailable. The goal is to provide users with clear communication about the situation by keeping them informed.
+The `DowntimePage` is a React component designed to inform users when website or online service is temporarily unavailable. The goal is to provide users with clear communication about the situation by keeping them informed.
 
-<img src="/img/molecules/downtimePage.png" alt="Downtime Page Molecule" />
+<img src="/img/pages/downtimePage.png" alt="Downtime Page" />
 
 ## Usage
 
@@ -18,17 +18,15 @@ The `DowntimePage` molecule is a React component designed to inform users when w
 import DowntimePage from './DowntimePage';
 
 const App = () => {
-  return (
-    <DowntimePage />
-  );
-}
+  return <DowntimePage />;
+};
 
 export default App;
 ```
 
 ## Description
 
-The `DowntimePage` molecule consists of the following elements:
+The `DowntimePage` consists of the following elements:
 
 - Contact Us button to contact support during downtime.
 - Try Again button to refresh the tab.
@@ -36,7 +34,7 @@ The `DowntimePage` molecule consists of the following elements:
 
 ## Functionality
 
-- This molecule will be displayed when the website is under maintainance.
+- This Page will be displayed when the website is under maintainance.
 - Users can refresh the page by using Try Again button.
 - By clicking Contact Us button, user can contact the support team.
 
@@ -57,7 +55,7 @@ The `DowntimePage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This Page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 
@@ -67,12 +65,10 @@ You can customize the theme colors by modifying the values in the `config.json` 
 "theme": {
   "primaryColor": {
     "value": "#219653",
-    "allowOverride": true
-  },
+     },
   "secondaryColor": {
     "value": "#828282",
-    "allowOverride": true
-  }
+     }
 }
 ```
 
@@ -83,41 +79,38 @@ To add custom actions for contact us, refresh or previuos page button, follow be
 - **Contact Functionality**: Implement the contact support logic within the `handleContactUserClick` function. You can use call or email options to connect with the required team.
 
 ```tsx
-const handleContactUserClick = useCallback(()=>{
-    console.log(component.contactLink ?? "Contact Details") //Implement your contact user logic here
-  }, [])
+const handleContactUserClick = useCallback(() => {
+  console.log(component.contactLink ?? 'Contact Details'); //Implement your contact user logic here
+}, []);
 ```
 
 - **Refresh Functionality**: Implement the refresh logic within the `handleRefreshClick` function. You can use reload() method to refresh the page.
 
 ```tsx
-const handleRefreshClick = useCallback(()=>{
-    // window?.location.reload()
-    console.log(component.refreshText ?? "Contact Details")
-  }, [])
-  ```
-  
-  - **Previous Page Functionality**: Implement the previous page logic within the `handlePreviousClick` function. You can use back() method to go to the previous page.
+const handleRefreshClick = useCallback(() => {
+  // window?.location.reload()
+  console.log(component.refreshText ?? 'Contact Details');
+}, []);
+```
 
-  ```tsx
-  const handlePreviousClick = useCallback(()=>{
-      // window?.history.back();
-      console.log(component.previousPageText ?? "Contact Details")
-  }, [])
-  ```
+- **Previous Page Functionality**: Implement the previous page logic within the `handlePreviousClick` function. You can use back() method to go to the previous page.
+
+```tsx
+const handlePreviousClick = useCallback(() => {
+  // window?.history.back();
+  console.log(component.previousPageText ?? 'Contact Details');
+}, []);
+```
 
 ### Updating Component
+
 You can update the component keys by modifying the `key` value in the `config.json` file.
 
 ```json
 "component": {
-      "allowOverride": false,
-      "title": "We're under maintainance",
-      "downTimeImage": "/src/pages/downtime-page/assets/downTimeGIF.gif",
-      "supportingText": "Have an urgent query?",
-      "contactLink": "Call Ama Krushi",
-      "refreshText": "Try Again",
-      "previousPageText": "Previous Page"
+      "downTimeImage": "",
+      "downtimeShowCallBox": false,
+      "downtimePhoneNumber": ""
   }
 ```
 

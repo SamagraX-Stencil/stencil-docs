@@ -8,9 +8,9 @@ sidebar_label: Coming Soon Page
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `Coming Soon` molecule is a React component designed to inform visitors about upcoming features, products, or events. It acts as a temporary placeholder until the anticipated content or functionality is ready for launch. 
+The `Coming Soon` Page is a React component designed to inform visitors about upcoming features, products, or events. It acts as a temporary placeholder until the anticipated content or functionality is ready for launch.
 
-<img src="/img/molecules/comingSoonPage.png" alt="ComingSoon Page Molecule" />
+<img src="/img/pages/comingSoonPage.png" alt="ComingSoon Page" />
 
 ## Usage
 
@@ -18,23 +18,21 @@ The `Coming Soon` molecule is a React component designed to inform visitors abou
 import ComingSoonPage from './ComingSoonPage';
 
 const App = () => {
-  return (
-    <ComingSoonPage />
-  );
-}
+  return <ComingSoonPage />;
+};
 
 export default App;
 ```
 
 ## Description
 
-The `ComingSoonPage` molecule consists of the following elements:
+The `ComingSoonPage` consists of the following elements:
 
 - Back button to go on previous page.
 
 ## Functionality
 
-- This molecule will be displayed until the upcoming functionality is ready for launch.
+- This Page will be displayed until the upcoming functionality is ready for launch.
 - Users can go to previous page by using Back button.
 
 ## Dependencies
@@ -54,7 +52,7 @@ The `ComingSoonPage` molecule consists of the following elements:
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This Page provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
 ### Theme Customization
 
@@ -64,37 +62,32 @@ You can customize the theme colors by modifying the values in the `config.json` 
 "theme": {
   "primaryColor": {
     "value": "#219653",
-    "allowOverride": true
-  },
+     },
   "secondaryColor": {
     "value": "#828282",
-    "allowOverride": true
-  }
+     }
 }
 ```
 
 ### Adding Custom Actions
 
 To add custom actions for previous page feature, follow below steps:
-  
-  - **Previous Page Functionality**: Implement the previous page logic within the `handleBack` function. You can use back() method to go to the previous page.
 
-  ```tsx
-  const handleBack = useCallback(()=>{
-    // window?.history?.back()
-    console.log(component.backText ?? "Back Button")
-  },[])
-  ```
+- **Previous Page Functionality**: Implement the previous page logic within the `handleBack` function. You can use back() method to go to the previous page.
+
+```tsx
+const handleBack = useCallback(() => {
+  // window?.history?.back()
+  console.log(component.backText ?? 'Back Button');
+}, []);
+```
 
 ### Updating Component
+
 You can update the component keys by modifying the `key` value in the `config.json` file.
 
 ```json
 "component": {
-    "allowOverride": false,
-    "title": "Coming Soon!",
-    "description": "We are going to launch this feature very soon. Stay tuned!",
-    "backText": "Back"
   }
 ```
 

@@ -3,22 +3,17 @@ title: Sidebar
 sidebar_label: Sidebar
 ---
 
-
 <head>
   <title> Sidebar </title>
-  <meta
-   
-    content=" Sidebar Component"
-  />
+  <meta content=" Sidebar Component" />
 </head>
 
-The Navbar molecule is a React component designed for  all purpose Navigation. It allows users to  navigate across the webpage through it's multipurpose navigation options.
+The Navbar molecule is a React component designed for all purpose Navigation. It allows users to navigate across the webpage through it's multipurpose navigation options.
 
 <img src="/img/molecules/sidebar.png" alt=" Sidebar Molecule" />
 
-
-
 ## Usage
+
 ```
 import Sidebar from './sidebar';
 
@@ -31,19 +26,13 @@ const App = () => {
 export default App;
 ```
 
- 
-
 ## Description
 
-- *Dynamic Configuration*: The sidebar's content and behavior are driven by a configuration object loaded asynchronously from a JSON file.
-- *Language Switcher*: If enabled in the configuration, the sidebar displays a language switcher allowing users to switch between different languages. Each language option is represented by a button with a label.
-- *Profile Icon and Text*: Optionally, the sidebar can display a profile icon along with custom text, providing users with personalized information.
-- *Menu Links*: The main navigation links are listed within the sidebar. Each link consists of an icon, label, and an optional chevron icon indicating a sub-menu.
-- *Logout Button*: If specified in the configuration, a logout button is displayed at the bottom of the sidebar for user session management.
-
-
- 
- 
+- _Dynamic Configuration_: The sidebar's content and behavior are driven by a configuration object loaded asynchronously from a JSON file.
+- _Language Switcher_: If enabled in the configuration, the sidebar displays a language switcher allowing users to switch between different languages. Each language option is represented by a button with a label.
+- _Profile Icon and Text_: Optionally, the sidebar can display a profile icon along with custom text, providing users with personalized information.
+- _Menu Links_: The main navigation links are listed within the sidebar. Each link consists of an icon, label, and an optional chevron icon indicating a sub-menu.
+- _Logout Button_: If specified in the configuration, a logout button is displayed at the bottom of the sidebar for user session management.
 
 ## Functionality
 
@@ -55,20 +44,18 @@ export default App;
 
 - The appearance and behavior of the component can be customized by modifying the values in the config file.
 
-
-
- 
-
 ## Dependencies
+
 - React: JavaScript library for building user interfaces.
 - Material-UI (Mui): React components for faster and easier web development.
-- ThemePicker Component: T A custom component for selecting different themes for the application.  
- 
+- ThemePicker Component: T A custom component for selecting different themes for the application.
 
 ## Configuration
--  All the configuration can be done from the config.json file for the navbar component. Here are some of the common configuration types:-
 
- ###   Language :
+- All the configuration can be done from the config.json file for the navbar component. Here are some of the common configuration types:-
+
+### Language :
+
 The Language can be changed from the config.json file with the available language code and also the label can be changed from the same
 
 ```json
@@ -85,8 +72,8 @@ The Language can be changed from the config.json file with the available languag
       ],
 ```
 
+### Links(Routing) :
 
- ###   Links(Routing) :
 The Routing of the other pages can be configured from the links array which store the label name, icons and route all can be configured from there.
 
 ```json
@@ -109,14 +96,30 @@ The Routing of the other pages can be configured from the links array which stor
         }
       ],
 ```
- 
- 
- 
- 
 
- 
+## Config Obj:
 
+```json
+
+     "showLangSwitcher": true,
+     "languageToggleColor": "#209653",
+     "sidebarBackground": "#1e6231",
+     "faqPage": true,
+     "feedbackPage": true,
+     "historyPage": true,
+     "languageCode1": "en",
+     "languageCode2": "",
+     "languageName1": "ENG",
+     "languageName2": "ENG",
+     "showProfileIcon": true,
+     "showPhoneNumber": true,
+     "showLogoutButton": true,
+     "showBhashiniLogo": false,
+     "showDarshanLogo": false
+
+```
 
 ## Notes
- - This molecule is not properly routed for the project. Route it according to your project and customize the icons to your brand theme and work on it. 
- - The internal routing also needs to be done for easy navigation.
+
+- This molecule is not properly routed for the project. Route it according to your project and customize the icons to your brand theme and work on it.
+- The internal routing also needs to be done for easy navigation.

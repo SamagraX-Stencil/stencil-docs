@@ -50,28 +50,16 @@ The ChatUI component offers flexibility for customization through its configurat
 ```json
 
   "component": {
-     
-  
-      "allowOverride": false,
-      "placeholder": "Ask Your Question",
+
       "allowFeedback": true,
-      "positiveFeedbackText": "Helpful",
-      "negativeFeedbackText": "Not Helpful",
       "allowTextToSpeech": true,
-      "textToSpeechLabel": "Click to hear",
-      "allowShareChat": true,
-      "shareChatText": "Share",
-      "allowDownloadChat": true,
-      "downloadChatText": "Download",
-      "allowTransliteration": true,
       "transliterationApi": "",
-      "transliterationInputLanguage": "",
-      "transliterationOutputLanguage": "",
-      "transliterationProvider": "",
+      "allowTransliteration": true,
+      "transliterationProvider": "bhashini",
       "transliterationSuggestions": 3,
-      "rightAction": null,
-      "leftAction": null
-  
+      "transliterationInputLanguage": "en",
+      "transliterationOutputLanguage": "hi"
+
   }
 ```
 
@@ -82,12 +70,10 @@ The component utilizes CSS modules for styling. Theme colors can be configured t
 ```json
   "theme":
     "primaryColor": {
-      "allowOverride": true,
-      "value": "#fff"
+            "value": "#fff"
     },
     "secondaryColor": {
-      "allowOverride": true,
-      "value": "#219653"
+            "value": "#219653"
     }
 ```
 

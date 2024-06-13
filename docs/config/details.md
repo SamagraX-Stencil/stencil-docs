@@ -32,12 +32,6 @@ This documentation outlines a generic schema for defining UI components within a
 - **Mandatory**: No
 - **Description**: The default value of the component. The type and format can vary based on the componentType.
 
-### `allowOverride`
-
-- **Type**: boolean
-- **Mandatory**: Yes
-- **Description**: Indicates whether the default value of the component can be overridden inside the molecule or not, allowing for customization.
-
 ### `isAvailable`
 
 - **Type**: boolean
@@ -55,8 +49,8 @@ This documentation outlines a generic schema for defining UI components within a
 - **Type**: theme | molecule
 - **Mandatory**: Yes
 - **Description**: Categorizes the config based on their nature.
- Where ,`theme` is used for style related configuration and `molecule` is used for UI molecule(component). 
- 
+  Where ,`theme` is used for style related configuration and `molecule` is used for UI molecule(component).
+
 ### `props`
 
 - **Type**: object
@@ -80,7 +74,6 @@ This documentation outlines a generic schema for defining UI components within a
     "componentName": "Primary Color",
     "componentType": "colorpicker",
     "defaultValue": "#ffffff",
-    "allowOverride": true,
     "isAvailable": true,
     "showInAdmin": true,
     "category": "theme",
@@ -93,7 +86,6 @@ This documentation outlines a generic schema for defining UI components within a
     "componentName": "Navbar",
     "componentType": "molecule",
     "defaultValue": "",
-    "allowOverride": true,
     "isAvailable": true,
     "showInAdmin": true,
     "category": "molecule",
@@ -105,18 +97,16 @@ This documentation outlines a generic schema for defining UI components within a
           "componentName": "Brand Name",
           "keyName": "brandName",
           "defaultValue": "brandName",
-          "allowOverride": true,
           "isAvailable": true,
-          "showInAdmin": true,
+          "showInAdmin": true
         },
         {
           "componentType": "fileInput",
           "componentName": "Right Side Logo",
           "keyName": "rightLogo",
           "defaultValue": "",
-          "allowOverride": true,
           "isAvailable": true,
-          "showInAdmin": true,
+          "showInAdmin": true
         }
       ]
     }
@@ -138,14 +128,12 @@ Based on the filled values the result config will look like this,
 {
   "theme": {
     "primaryColor": {
-      "value": "#11e477",
-      "allowOverride": true
+      "value": "#11e477"
     }
   },
   "molecule": {
     "navbar": {
-      "brandName": "test bot",
-      "allowOverride": true
+      "brandName": "test bot"
     }
   }
 }

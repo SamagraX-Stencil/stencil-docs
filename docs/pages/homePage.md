@@ -10,7 +10,7 @@ sidebar_label: Home Page
 
 The HomePage component is a React page designed to serve as the main interface for users to interact with the application. It allows users to input messages or questions, view relevant buttons for actions, and optionally display a voice recorder.
 
-<img src= "/img/molecules/homePage.png" alt="Home Page Molecule" />
+<img src="/img/pages/homePage.png" alt="Home Page" />
 
 ## Usage
 
@@ -18,10 +18,8 @@ The HomePage component is a React page designed to serve as the main interface f
 import HomePage from './HomePage';
 
 const App = () => {
-  return (
-    <HomePage />
-  );
-}
+  return <HomePage />;
+};
 
 export default App;
 ```
@@ -36,9 +34,9 @@ The HomePage component consists of the following elements:
 
 ## Functionality
 
-*1. Input Message Handling*
+_1. Input Message Handling_
 
- Users can type messages or questions into the input field. The input field adjusts its height dynamically based on the content.
+Users can type messages or questions into the input field. The input field adjusts its height dynamically based on the content.
 
 ```tsx
 const handleInputChange = (e: any) => {
@@ -53,33 +51,24 @@ const handleInputChange = (e: any) => {
 };
 ```
 
-
-*2. Sending Messages*
+_2. Sending Messages_
 Users can send messages by clicking the send button. Empty messages trigger an error toast, while non-empty messages result in a success toast.
 
-
 ```tsx
-const sendMessage = useCallback(
-  async (msg: string) => {
-    if (msg.length === 0) {
-      toast.error('Please enter a message to send');
-      return;
-    }
-    toast.success('Message sent!');
-    setInputMsg('');
-  },
-  []
-);
+const sendMessage = useCallback(async (msg: string) => {
+  if (msg.length === 0) {
+    toast.error('Please enter a message to send');
+    return;
+  }
+  toast.success('Message sent!');
+  setInputMsg('');
+}, []);
 ```
-
 
 ## Dependencies
 
 - React: JavaScript library for building user interfaces.
 - Material-UI (Mui): React components for faster and easier web development.
- 
-
- 
 
 ## Styling
 
@@ -88,40 +77,43 @@ const sendMessage = useCallback(
 
 ## Customization
 
- The *Home Page* component offers flexibility for customization to match your application's requirements. Here are some customization options:
+The _Home Page_ component offers flexibility for customization to match your application's requirements. Here are some customization options:
+
 ### Theme Customization
 
 Modify the colors and styles in the config.json file to match your application's design.
+
 ```json
 "theme": {
     "primaryColor": {
-      "allowOverride": true,
-      "value": "#1e6231"
+            "value": "#1e6231"
     }
 }
 
 ```
 
-### Component Configuration 
+### Component Configuration
 
 Update the component object in the config.json file to customize various aspects of the HomePage component, such as the title, button visibility, microphone visibility, and placeholder text for the input field.
 
- ```json
+```json
 
 "component": {
-        "allowOverride": false,
-      "title": "Ask me anything about farming",
-      "showKalia": false,
-      "showWeatherAdvisory": true,
-      "showPlantProtection": true,
-      "weatherAdvisoryImg": "",
-      "plantProtectionImg": "",
-      "kaliaStatusImg": "",
-      "showMic": true
+     "showKalia": false,
+     "showWeatherAdvisory": true,
+     "showPlantProtection": true,
+     "weatherAdvisoryImg": "",
+     "plantProtectionImg": "",
+     "kaliaStatusImg": "",
+     "showMic": true,
+     "topGap": "120px",
+     "micWidth": "143px",
+     "micHeight": "143px",
+     "showTapToSpeakText": false
+
 }
 
 ```
- 
 
 ## Notes
 
