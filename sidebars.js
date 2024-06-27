@@ -73,6 +73,11 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'File-Upload',
+      items: ['File-upload/File-upload','File-upload/Setup']
+    },
+    {
+      type: 'category',
       label: 'CLI',
       collapsed: false,
       items: ['cli/introduction', 'cli/installation'],
