@@ -160,10 +160,8 @@ Generates and/or modifies files based on a schematic
 |---|---|---|
 |  `app` |   | Generate a new application within a monorepo (converting to monorepo if it's a standard structure). |
 |  `library` |`lib`   | Generate a new library within a monorepo (converting to monorepo if it's a standard structure).  |
-|  `class` |`cl`   | Generate a new class.
-  |
-|  `controller` |`co`   | 				Generate a controller declaration.
-  |
+|  `class` |`cl`   | Generate a new class.|
+|  `controller` |`co`   | 				Generate a controller declaration.|
 |  `decorator` |`d`   |  Generate a custom decorator. |
 |  `filter` |`f`   | Generate a filter declaration.  |
 |  `gateway` |`ga`   | Generate a gateway declaration.  |
