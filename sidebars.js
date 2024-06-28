@@ -75,7 +75,7 @@ module.exports = {
       type: 'category',
       label: 'CLI',
       collapsed: false,
-      items: ['cli/introduction', 'cli/installation'],
+      items: ['cli/introduction', 'cli/installation' , 'cli/scripts'],
     },
     {
       type: 'category',
