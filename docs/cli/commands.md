@@ -174,8 +174,7 @@ Generates and/or modifies files based on a schematic
 |  `provider` |`pr`   | Generate a provider declaration.  |
 |  `resolver` |`r`   | Generate a resolver declaration.  |
 |  `resource` |`res`   | Generate a new CRUD resource. See the CRUD (resource) generator for more details. (TS only)  |
-|  `service` |`s`   |  		Generate a service declaration.
- |
+|  `service` |`s`   |  		Generate a service declaration.|
 |  `sub-app` |`app`   |  Generate a new application within a monorepo |
 |  `service-prisma` |`sp`   | Generate the Prisma service file  |
 |  `service-user` |`su`   |  Add the User Service module from the package. |
