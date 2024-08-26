@@ -8,108 +8,127 @@ sidebar_label: Navbar
   <meta content=" Navbar Component" />
 </head>
 
-The Navbar molecule is a React component designed for all purpose Navigation. It allows users to navigate across the webpage through it's multipurpose navigation options.
+The `Navbar` is a React component that creates a customizable top navigation bar using Material-UI components. It supports various features such as a hamburger menu, home icon, brand name, and logo placements.
 
-<img src="/img/molecules/navbar.png" alt=" Navbar Molecule" />
+<!-- <img src="/img/molecules/navbar.png" alt=" Navbar Molecule" /> -->
 
 ## Usage
 
-```
-import Navbar from './navbar';
+```tsx
+import Navbar from './packageName';
 
 const App = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const centerLogoIcons = [{ id: 'main-logo', src: '/path/to/logo.png' }];
+
   return (
-    <Navbar />
+    <Navbar
+      brandName="My App"
+      onToggle={() => setIsOpen(!isOpen)}
+      isOpen={isOpen}
+      showHamburgerMenu
+      showHomeIcon
+      centerLogoIcons={centerLogoIcons}
+    />
   );
-}
+};
 
 export default App;
 ```
 
 ## Description
 
-The Navbar component is a React functional component responsible for rendering a navigation bar at the top of the application. It utilizes Material-UI components for styling and functionality.
+The `Navbar` component consists of the following elements:
 
-- The component is structured using Material-UI components such as AppBar, Toolbar, and IconButton for styling and functionality.
-
-- Configuration for the component is provided via a JSON file imported as config.
-
-- State management is handled using React's useState hook, toggling the visibility of the sidebar.
-
-- The sidebar is rendered conditionally based on the state of isSidebarOpen.
-
-- The component utilizes custom hooks from a theme provider for managing theme-related functionality.
-
-- The appearance and behavior of the component can be customized by modifying the values in the config file.
+- An AppBar component from Material-UI for the container
+- Optional hamburger menu button
+- Optional home icon
+- Center section for logos and brand name
+- Right section for additional logos
 
 ## Functionality
 
-- _Hamburger Menu_: If enabled through configuration, a hamburger menu icon is displayed on the left side of the toolbar. Clicking this icon toggles the sidebar open and closed.
+- Displays a hamburger menu button that triggers a toggle function
+- Shows a home icon if enabled
+- Renders center logos and brand name
+- Displays right-aligned logos
+- Supports custom styling for various sections
 
-- _Home Icon_: If enabled through configuration, a home icon is displayed on the left side of the toolbar, alongside an optional additional icon specified in the configuration. Clicking the home icon typically navigates the user to the home page of the application.
+## Props
 
-- _Center Logos_: If configured to display, logos specified in the configuration are rendered in the center of the toolbar. These logos can be any image files.
+The `Navbar` component accepts the following props:
 
-- _Brand Name_: If specified in the configuration, the brand name is displayed in the center of the toolbar, below the center logos.
+- `brandName`: Optional string for the brand name
+- `onToggle`: Function to toggle the sidebar state
+- `isOpen`: Boolean representing the sidebar open state
+- `showHamburgerMenu`: Boolean to show/hide the hamburger menu (default: true)
+- `showHomeIcon`: Boolean to show/hide the home icon (default: false)
+- `leftHomeIcon`: Array of Icon objects for icons next to the home icon
+- `centerLogoIcons`: Array of Icon objects for center logos
+- `rightLogoIcons`: Array of Icon objects for right-aligned logos
+- `style`: Object for custom styling of various sections
+- `children`: React nodes to render additional content
 
-- _Right Logos_: If configured to display, logos specified in the configuration are rendered on the right side of the toolbar.
+## Styling
 
-- _Theme Picker_: A component allowing the user to select different themes for the application is rendered on the right side of the toolbar.
+- The component uses Material-UI's styling system
+- Custom styles can be passed via the `style` prop for different sections of the navbar
 
-## Dependencies
+## Customization
 
-- React: JavaScript library for building user interfaces.
-- Material-UI (Mui): React components for faster and easier web development.
-- ThemePicker Component: T A custom component for selecting different themes for the application.
+This component provides flexibility for customization to suit your application's requirements. Here are some customization options:
 
-## Configuration
+### Style Customization
 
-- All the configuration can be done from the config.json file for the navbar component. Here are some of the common configuration types:-
+You can customize the appearance of the Navbar by passing a `style` object:
 
-### Hamburger:
+```tsx
+const customStyle = {
+  appBar: {
+    /* custom styles for AppBar */
+  },
+  toolbar: {
+    /* custom styles for Toolbar */
+  },
+  leftSection: {
+    /* custom styles for left section */
+  },
+  centerSection: {
+    /* custom styles for center section */
+  },
+  rightSection: {
+    /* custom styles for right section */
+  },
+};
 
-Toggle the visibility of the hamburger menu icon by modifying the showHamburgerMenu property:
-
-```json
- "showHamburgerMenu": true // or false
+<Navbar
+  // ... other props
+  style={customStyle}
+/>;
 ```
 
-### Brand Name:
+### Adding Custom Logos
 
-You can put your brand name to get it reflected on the UI
+To add or modify logos, update the respective icon arrays passed to the component:
 
-```json
+```tsx
+const centerLogoIcons = [
+  { id: 'main-logo', src: '/path/to/main-logo.png' },
+  { id: 'secondary-logo', src: '/path/to/secondary-logo.png' },
+];
 
-  "brandName": "Bot" // or any other name
+const rightLogoIcons = [{ id: 'partner-logo', src: '/path/to/partner-logo.png' }];
 
-```
-
-### Config Obj:
-
-```json
-
-      "showNavbar": true,
-      "showLanguageToggle": true,
-      "languageCode_1": "en",
-      "languageLabel1": "ENG",
-      "languageLabel2": "ENG",
-      "languageCode_2": "",
-      "showHamburgerMenu": true,
-      "showHomeIcon": true,
-      "showCenterLogo": false,
-      "centerLogoSrc": "",
-      "showRightLogo1": false,
-      "rightLogo1Src": "",
-      "showRightLogo2": false,
-      "rightLogo2Src": "",
-      "showRightLogo3": false,
-      "rightLogo3Src": "",
-      "centerLogoSize": "60px",
-      "logoTitleColor": "#1e6231",
-      "newChatButtonColor": "#1e6231"
-
+<Navbar
+  // ... other props
+  centerLogoIcons={centerLogoIcons}
+  rightLogoIcons={rightLogoIcons}
+/>;
 ```
 
 ## Notes
 
-- This molecule is not properly routed for the project. Route it according to your project and customize the icons to your brand theme and work on it.
+- The component is designed to work with a sidebar component, but the sidebar implementation is commented out in the provided code.
+- A `ThemePicker` component is also commented out, indicating potential for theme customization.
+- For further customization, you can modify the JSX structure, styles, and functionality according to your application's needs.

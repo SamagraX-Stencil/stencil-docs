@@ -8,118 +8,158 @@ sidebar_label: Sidebar
   <meta content=" Sidebar Component" />
 </head>
 
-The Navbar molecule is a React component designed for all purpose Navigation. It allows users to navigate across the webpage through it's multipurpose navigation options.
+The `Sidebar` is a React component that creates a customizable drawer-style sidebar using Material-UI components. It supports various features such as language switching, profile display, navigation links, and a logout option.
 
-<img src="/img/molecules/sidebar.png" alt=" Sidebar Molecule" />
+<!-- <img src="/img/molecules/sidebar.png" alt=" Sidebar Molecule" /> -->
 
 ## Usage
 
-```
-import Sidebar from './sidebar';
+```tsx
+import Sidebar from './packageName';
+import { Home, Settings } from '@mui/icons-material';
 
 const App = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [activeLanguage, setActiveLanguage] = React.useState('en');
+
+  const links = [
+    { label: 'Home', icon: <Home />, route: '/' },
+    { label: 'Settings', icon: <Settings />, route: '/settings' },
+  ];
+
+  const languages = [
+    { name: 'English', value: 'en' },
+    { name: 'Spanish', value: 'es' },
+  ];
+
+  const handleLanguageClick = (event: SelectChangeEvent<string>) => {
+    setActiveLanguage(event.target.value as string);
+  };
+
+  const handleLogOut = () => {
+    // Handle logout logic
+  };
+
   return (
-    <Sidebar />
+    <Sidebar
+      isOpen={isOpen}
+      onToggle={() => setIsOpen(!isOpen)}
+      showProfileIcon
+      showLangSwitcher
+      profileText="John Doe"
+      links={links}
+      handleLogOutButton={handleLogOut}
+      languages={languages}
+      activeLanguage={activeLanguage}
+      handleLanguageClick={handleLanguageClick}
+    />
   );
-}
+};
 
 export default App;
 ```
 
 ## Description
 
-- _Dynamic Configuration_: The sidebar's content and behavior are driven by a configuration object loaded asynchronously from a JSON file.
-- _Language Switcher_: If enabled in the configuration, the sidebar displays a language switcher allowing users to switch between different languages. Each language option is represented by a button with a label.
-- _Profile Icon and Text_: Optionally, the sidebar can display a profile icon along with custom text, providing users with personalized information.
-- _Menu Links_: The main navigation links are listed within the sidebar. Each link consists of an icon, label, and an optional chevron icon indicating a sub-menu.
-- _Logout Button_: If specified in the configuration, a logout button is displayed at the bottom of the sidebar for user session management.
+The `Sidebar` component consists of the following elements:
+
+- A Drawer component from Material-UI for the sidebar container
+- Optional language picker
+- Optional profile display
+- List of navigation links
+- Logout button
 
 ## Functionality
 
-- The component is structured using Material-UI components such as Drawer, List, and ListItem etc for styling and functionality.
-
-- Configuration for the component is provided via a JSON file imported as config.
-
-- State management is handled using React's useState hook, toggling the visibility of the active language.
-
-- The appearance and behavior of the component can be customized by modifying the values in the config file.
+- Opens and closes based on the `isOpen` prop
+- Displays a language picker if `showLangSwitcher` is true
+- Shows a profile section if `showProfileIcon` is true
+- Renders a list of navigation links
+- Provides a logout button
+- Supports custom styling for various elements
 
 ## Dependencies
 
-- React: JavaScript library for building user interfaces.
-- Material-UI (Mui): React components for faster and easier web development.
-- ThemePicker Component: T A custom component for selecting different themes for the application.
+- React: JavaScript library for building user interfaces
+- Material-UI (MUI): React components for faster and easier web development
+- Next.js Router: For handling navigation
 
-## Configuration
+## Props
 
-- All the configuration can be done from the config.json file for the navbar component. Here are some of the common configuration types:-
+The `Sidebar` component accepts the following props:
 
-### Language :
+- `isOpen`: Boolean to control the open/closed state of the sidebar
+- `onToggle`: Function to toggle the sidebar state
+- `showProfileIcon`: Boolean to show/hide the profile section
+- `showLangSwitcher`: Boolean to show/hide the language picker
+- `profileText`: String for the profile display text
+- `links`: Array of Link objects for navigation items
+- `handleLogOutButton`: Function to handle logout action
+- `languages`: Array of Language objects (required if `showLangSwitcher` is true)
+- `activeLanguage`: String representing the current language (required if `showLangSwitcher` is true)
+- `handleLanguageClick`: Function to handle language selection (required if `showLangSwitcher` is true)
+- `style`: Object for custom styling
+- `langPickerStyle`: Object for custom styling of the language picker
+- `children`: React nodes to render additional content
 
-The Language can be changed from the config.json file with the available language code and also the label can be changed from the same
+## Styling
 
-```json
+- The component uses Material-UI's styling system
+- Custom styles can be passed via the `style` and `langPickerStyle` props
 
-"languages": [
-        {
-          "code": "en",
-          "label": "ENG"
-        },
-        {
-          "code": "or",
-          "label": "ଓଡ଼ିଆ"
-        }
-      ],
+## Customization
+
+This component provides flexibility for customization to suit your application's requirements. Here are some customization options:
+
+### Style Customization
+
+You can customize the appearance of the Sidebar by passing a `style` object:
+
+```tsx
+const customStyle = {
+  sidebar: {
+    /* custom styles for sidebar container */
+  },
+  drawer: {
+    /* custom styles for drawer */
+  },
+  list: {
+    /* custom styles for list */
+  },
+  listItem: {
+    /* custom styles for list items */
+  },
+  listItemButton: {
+    /* custom styles for list item buttons */
+  },
+  profileText: {
+    /* custom styles for profile text */
+  },
+  icon: {
+    /* custom styles for icons */
+  },
+};
+
+<Sidebar
+  // ... other props
+  style={customStyle}
+/>;
 ```
 
-### Links(Routing) :
+### Adding Custom Links
 
-The Routing of the other pages can be configured from the links array which store the label name, icons and route all can be configured from there.
+To add or modify navigation links, update the `links` array passed to the component:
 
-```json
-
- "links": [
-        {
-          "label": "FAQ Page",
-          "icon": "HelpIcon",
-          "route": ""
-        },
-        {
-          "label": "Chat Page",
-          "icon": "HistoryIcon",
-          "route": ""
-        },
-        {
-          "label": "Feedback",
-          "icon": "FeedbackIcon",
-          "route": ""
-        }
-      ],
-```
-
-## Config Obj:
-
-```json
-
-     "showLangSwitcher": true,
-     "languageToggleColor": "#209653",
-     "sidebarBackground": "#1e6231",
-     "faqPage": true,
-     "feedbackPage": true,
-     "historyPage": true,
-     "languageCode1": "en",
-     "languageCode2": "",
-     "languageName1": "ENG",
-     "languageName2": "ENG",
-     "showProfileIcon": true,
-     "showPhoneNumber": true,
-     "showLogoutButton": true,
-     "showBhashiniLogo": false,
-     "showDarshanLogo": false
-
+```tsx
+const links = [
+  { label: 'Home', icon: <Home />, route: '/' },
+  { label: 'Settings', icon: <Settings />, route: '/settings' },
+  { label: 'Profile', icon: <Person />, route: '/profile' }, // New link added
+];
 ```
 
 ## Notes
 
-- This molecule is not properly routed for the project. Route it according to your project and customize the icons to your brand theme and work on it.
-- The internal routing also needs to be done for easy navigation.
+- The component uses Next.js router for navigation.
+- The language picker is implemented using a separate `NewLanguagePicker` component.
+- For further customization, you can modify the JSX structure, styles, and functionality according to your application's needs.

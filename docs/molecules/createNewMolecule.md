@@ -8,7 +8,7 @@ sidebar_label: Create New Molecule
   <meta name="description" content="your meta content goes here" />
 </head>
 
-Start by designing a molecule in the [molecule repository](https://github.com/SamagraX-Stencil/ui-templates/tree/dev/src/molecules). When doing so, create a new folder under `/src/molecules`. Consider the different configurations and customizations that could be applied to make the molecule versatile and visually appealing.
+Start by designing a molecule in the [molecule repository](https://github.com/SamagraX-Stencil/stencil-web/tree/dev/packages/molecules). When doing so, create a new folder under `/packages/molecules`. Consider the different configurations and customizations that could be applied to make the molecule versatile and visually appealing.
 The process of creating a molecule involves several steps.
 
 ## Folder Structure
