@@ -8,17 +8,30 @@ sidebar_label: Share & Download buttons
   <meta name="description" content="your meta content goes here" />
 </head>
 
-The `share-buttons` molecule is a React component designed for users actions to share and download chat.
+The `ShareButtons` is a React component that provides customizable share and download buttons. It's designed to be positioned absolutely within a parent container, typically used in chat or content sharing interfaces.
 
-<img src="/img/molecules/shareButtons.png" alt="Share button molecule" />
+<!-- <img src="/img/molecules/shareButtons.png" alt="Share button molecule" /> -->
 
 ## Usage
 
 ```tsx
-import ShareButtons from './share-buttons';
+import ShareButtons from './package';
 
 const App = () => {
-  return <ShareButtons />;
+  const handleButton = (event, type) => {
+    if (type === 'share') {
+      // Handle share action
+    } else if (type === 'download') {
+      // Handle download action
+    }
+  };
+
+  return (
+    <div style={{ position: 'relative' }}>
+      <ShareButtons allowShareChat={true} allowDownloadChat={true} handleButton={handleButton} />
+      {/* Your main content */}
+    </div>
+  );
 };
 
 export default App;
@@ -26,82 +39,79 @@ export default App;
 
 ## Description
 
-The `ShareButtons` molecule consists of the following elements:
+The `ShareButtons` component consists of:
 
-- Share button for sharing selected chat.
-- Download button for downloading selected chat.
-
-## State
-
-- `shareLoader`: It is used to make share state active is share button is clicked
-- `downloadLoader`: State active when download button is clicked
+- A container div positioned absolutely
+- Optional share button with icon and text
+- Optional download button with icon and text
+- Loading indicators for both buttons
 
 ## Functionality
 
-- Upon clicking the download button, the component initiates the download process.
-- If share button is clicked it check if system provides share functionality then, a success message is displayed, and if not, an error message is displayed.
+- Displays share and/or download buttons based on props
+- Triggers a callback function when buttons are clicked
+- Shows loading indicators when share or download actions are in progress
+- Allows extensive customization of styles
 
 ## Dependencies
 
-- React: JavaScript library for building user interfaces.
-- Material-UI (Mui): React components for faster and easier web development.
-- React Hot Toast: Toast notification library for React applications.
+- React: JavaScript library for building user interfaces
+- Material-UI (MUI): React components for faster and easier web development
 
-## Configuration
+## Props
 
-- The default theme colors can be configured in the config.json file.
-- The components can be configured in the config.json file.
+The `ShareButtons` component accepts the following props:
+
+- `allowShareChat`: Boolean to show/hide the share button (default: false)
+- `allowDownloadChat`: Boolean to show/hide the download button (default: false)
+- `handleButton`: Function called when a button is clicked, receives event and button type ('share' or 'download')
+- `shareLoader`: Boolean to show/hide loading indicator for share button
+- `downloadLoader`: Boolean to show/hide loading indicator for download button
+- `style`: Object for custom styling of various elements
 
 ## Styling
 
-- CSS modules are used for styling the component.
+- The component uses inline styles for positioning and basic appearance
+- Custom styles can be passed via the `style` prop for fine-grained control
 
 ## Customization
 
-This molecule provides flexibility for customization to suit your application's requirements. Here are some customization options:
+This component provides several options for customization:
 
-### Theme Customization
+### Style Customization
 
-You can customize the theme colors by modifying the values in the `config.json` file. The theme object contains `primaryColor` and `secondaryColor` properties, allowing you to specify the colors according to your brand or design preferences.
-
-```json
-"theme": {
-  "primaryColor": {
-    "value": "#1e6231",
-     },
-  "secondaryColor": {
-    "value": "#34a755",
-     }
-}
-```
-
-### Adding Custom Actions
-
-To add custom actions such as downloading or sharing steps:
-
-- **Download Chat Functionality**: Implement the download logic within the `downloadChat` function. You can trigger a download process with your backend service.
+You can customize the appearance of different parts of the component:
 
 ```tsx
-const downloadChat = async (type: string) => {
-  // perform your download chat logic here
-};
+<ShareButtons
+  // ... other props
+  style={{
+    container: { background: 'rgba(0, 0, 0, 0.1)' },
+    button: { padding: '10px' },
+    icon: { color: '#007bff' },
+    text: { fontSize: '12px' },
+    divider: { margin: '5px 0' },
+  }}
+/>
 ```
 
-### Accessing share and download button
+### Button Visibility
 
-You can select weather which functionality you want by simply modifying `allowDownloadChat` and `allowShareChat` value in the `config.json` file.
+Control which buttons are displayed:
 
-```json
-"component": {
-      "allowDownloadChat": true,
-      "allowShareChat": true,
-      "shareButtonColor": "#1e6231",
-      "downloadButtonColor": "#1e6231"
-    }
-
+```tsx
+<ShareButtons
+  allowShareChat={true}
+  allowDownloadChat={false}
+  // ... other props
+/>
 ```
 
 ## Notes
 
-- This molecule does not handle actual download chat feature. It simulates the process by displaying a downloading message upon clicking the download button and share successful message upon clicking share button.
+- The component is designed to be positioned absolutely within a relative parent container.
+- It uses Material-UI icons and components for consistency with Material Design.
+- The buttons are rendered only if either `allowShareChat` or `allowDownloadChat` is true.
+- A divider is shown between the buttons only if both are enabled.
+- The component uses the 'Mulish-bold' font family for button text, ensure this font is available in your application.
 - For further customization, you can modify the JSX structure, styles, and functionality according to your application's needs.
