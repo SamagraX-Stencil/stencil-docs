@@ -55,14 +55,14 @@ To quickly get started with Stencil, follow these simple steps:
 4. Set up the environment:
 
     ```bash
-    docker compose up setup
-    docker compose up -d
+    docker-compose up setup
+    docker-compose up -d
     ```
 
 5. Check the status of containers:
 
     ```bash
-    docker compose logs
+    docker-compose logs
     ```
 
 For detailed information on features, development setup, and testing procedures, refer to the comprehensive documentation.
